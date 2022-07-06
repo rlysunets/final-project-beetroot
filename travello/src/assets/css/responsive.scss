@@ -1,0 +1,178 @@
+@media screen and (min-width: 1700px) {
+    .hero {
+        background-position: 0 50%;
+    }
+} 
+@media screen and (max-width: 1100px) {
+    .explore {
+        &_wrap {
+            gap: 0;
+            .explore_photos {
+                flex-basis: 55%;
+                .pic {
+                    margin-bottom: 10px;
+                }
+                .pic_positioned {
+                    position: static;
+                    width: 100%;
+                }
+            }
+            .explore_content {
+                flex-basis: 45%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        gap: 40px;
+        .header_menu {
+            display: none;
+        }
+        .burger {
+            display: block;
+        }
+    }
+    .reviews {
+        &_wrap {
+            .reviews_content {
+                padding: 10px 60px 10px 0;
+            }
+        }
+    }
+    .footer {
+        &_content {
+            flex-wrap: wrap;
+            .footer_logo {
+                flex: 100%;
+                margin-bottom: 25px;
+            }
+            .footer_menu {
+                padding: 0 20px 20px 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .explore {
+        padding-top: 60px;
+        &_wrap {
+            flex-direction: column;
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            .explore_photos {
+                display: flex;
+                flex-basis: 100%;
+                .pic {
+                    flex-basis: 50%;
+                    margin-bottom: 0;
+                    margin-right: 5px;
+                }
+                .pic_positioned {
+                    flex-basis: 50%;
+                }
+            }
+            .explore_content {
+                flex-basis: 100%;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .hero {
+        &_wrap {
+            .hero_title {
+                font-weight: 600;
+                font-size: 42px;
+            }
+        }
+    }
+    .footer {
+        &_content {
+            .footer_menu {
+                flex: 50%;
+                padding: 0 20px 20px 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 667px) {
+    .reviews {
+    padding-bottom: 60px;
+        &_wrap {
+            flex-wrap: wrap;
+            .reviews_content {
+                flex-basis: 100%;
+                padding: 0;
+                .reviews_button {
+                    margin-bottom: 20px;
+                }
+            }
+            .reviews_image {
+                flex-basis: 100%;
+            }
+        }
+    }
+    input {
+        max-width: none;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .header_button {
+        display: none;
+    }
+    .section_title {
+        font-size: 36px;
+        line-height: 50px;
+    }
+    .explore {
+        &_wrap {
+            .explore_photos {
+                flex-wrap: wrap;
+                .pic {
+                    flex-basis: 100%;
+                    margin-bottom: 5px;
+                    margin-right: 0;
+                }
+                .pic_positioned {
+                    flex-basis: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .header_button {
+        display: none;
+    }
+    .hero {
+        &_wrap {
+            padding: 180px 0 70px;
+            color: #FFFFFF;
+            .hero_title {
+                font-size: 32px;
+                line-height: 110%;
+                margin-bottom: 25px;
+            }
+            .hero_descr {
+                line-height: 130%;
+            }
+        }
+    }
+    .get_in_touch {
+        &_wrap {
+            .form {
+                max-width: none;
+                width: 100%;
+            }
+        }
+    }
+    .address_cards {
+        flex-wrap: wrap;
+    }
+}
