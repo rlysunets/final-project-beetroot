@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Intro title="Why choose us" />
+        <Intro title="Why choose us" bg="./images/why_choose_us/hero.jpg" />
     </div>
 </template>
 
@@ -14,8 +14,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.intro {
-    background-image: url(../assets/images/why_choose_us/hero.jpg);
-}
 </style>

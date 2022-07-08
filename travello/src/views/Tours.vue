@@ -1,6 +1,6 @@
 <template>
     <div class="tours">
-        <intro title="Tours" />
+        <intro title="Tours" bg="./images/tours/hero.jpg" />
     </div>
 </template>
 
@@ -16,7 +16,4 @@ export default {
 </script>
 
 <style lang="scss">
-.intro {
-    background-image: url(../assets/images/tours/hero.jpg);
-}
 </style>

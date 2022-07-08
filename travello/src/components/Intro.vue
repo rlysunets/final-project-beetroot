@@ -1,6 +1,5 @@
 <template>
-    <!-- :style="{ backgroundImage: `url('${bg}')` }" -->
-    <section class="intro">
+    <section class="intro" :style="{ backgroundImage: `url('${bg}')` }">
         <div class="container">
             <div class="intro_wrap">
                 <h2 class="intro_title">{{ title }}</h2>
@@ -13,24 +12,22 @@
 export default {
     name: "intro",
     props: {
-        title: { type: String, default: "", required: true },
-        // bg: { type: String, default: "../assets/images/contacts/hero.jpg", required: false }
-
+        title: {
+            type: String,
+            default: "",
+            required: true
+        },
+        bg: {
+            type: String,
+            default: "",
+            required: false
+        }
     },
-    // methods: {
-    //     backgroundStyles(bg) {
-    //         return {
-    //             'background-image': `url(${bg})`,
-    //         }
-    //     }
-    // }
 }
 </script>
 
 <style lang="scss">
-
 .intro {
-    // background-image: url(../assets/images/contacts/hero.jpg);
     background-color: #959c98;
     background-repeat: no-repeat;
     background-position: 50% 50%;

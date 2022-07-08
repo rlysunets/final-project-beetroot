@@ -1,6 +1,6 @@
 <template>
     <div>
-        <intro title="About us" />
+        <intro title="About us" bg="./images/about/hero.jpg" />
     </div>
 </template>
 
@@ -14,9 +14,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.intro {
-    background-image: url(../assets/images/about/hero.jpg);
-}
 
 </style>

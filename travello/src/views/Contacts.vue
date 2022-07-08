@@ -1,13 +1,13 @@
 <template>
     <div class="contacts">
-        <!-- intro section -->
-        <!-- :style="backgroundStyles('../assets/images/contacts/hero.jpg')" -->
-        <intro title="Contact us" />
+        <intro title="Contact us" bg="./images/contacts/hero.jpg" />
 
         <!-- Get in touch section-->
         <section-wrapper hint="Contact" title="Get in touch">
             <Form />
         </section-wrapper>
+
+        <address-card />
 
         <!-- <section class="get_in_touch">
             <div class="container">
@@ -62,20 +62,19 @@
 import Intro from "@/components/Intro.vue"
 import SectionWrapper from "@/components/SectionWrapper.vue"
 import Form from "@/components/Form.vue"
+import AddressCard from "@/components/AddressCard.vue"
 export default {
     name: "contacts",
     components: {
-        Intro,
-        SectionWrapper,
-        Form
-    }
+    Intro,
+    SectionWrapper,
+    Form,
+    AddressCard
+}
 }
 </script>
 
 <style lang="scss" scoped>
-.intro {
-    background-image: url(../assets/images/contacts/hero.jpg);
-}
 input,
 textarea {
     padding: 12px 25px;
