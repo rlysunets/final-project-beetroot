@@ -21,10 +21,13 @@
                         <li class="menu_item">
                             <router-link class="menu_link" to="/trips">Trips</router-link>
                         </li>
+                        <li class="menu_item">
+                            <router-link class="menu_link" to="/tours">Tours</router-link>
+                        </li>
                     </ul>
                 </nav>
                 <div class="header_button">
-                    <my-button title="hello" :is-icon="true" @click="$router.push('/contacts')" />
+                    <my-button title="Contact us" :is-icon="false" @click="$router.push('/contacts')" />
                 </div>
 
                 <!-- burger menu -->
@@ -69,6 +72,9 @@
                         <li class="menu-mobile_item">
                             <a href="#" class="menu-mobile_link">Trips</a>
                         </li>
+                        <li class="menu-mobile_item">
+                            <a href="#" class="menu-mobile_link">Tours</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -82,17 +88,16 @@ import MyButton from "./MyButton.vue"
 export default {
     name: "Header",
     components: {
-        MyButton,
-
+        MyButton
     },
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 header {
-    background: #000;
+    // background-color: transparent;
+    background-color: #000;
 }
-
 .header {
     font-family: 'Work Sans';
     font-weight: 500;
@@ -103,37 +108,25 @@ header {
     gap: 82px;
     align-items: center;
     height: 80px;
-
     &_logo {
         flex: 1 1 auto;
     }
-
     &_menu {
         .menu_list {
             display: flex;
             gap: 48px;
-
             .menu_item {
-                &:hover {
-                    text-decoration: underline;
-                    // border-bottom: 1px solid #FFFFFF;
-                    // padding-bottom: 3px;
-                    transition: all .3s ease;
+                .menu_link {
+                    &:hover {
+                        border-bottom: 1px solid #FFFFFF;
+                        padding-bottom: 3px;
+                        transition: all .3s ease;
+                    }
                 }
-
-                // .menu_link {
-
-                    // &:hover {
-                    //     border-bottom: 1px solid #FFFFFF;
-                    //     padding-bottom: 3px;
-                    //     transition: all .3s ease;
-                    // }
-                // }
             }
         }
     }
 }
-
 
 /* burger & mobile menu styles ============================================= */
 .burger,
@@ -155,22 +148,18 @@ header {
     display: block;
     transition: all .3s ease;
     transform: translateX(-110%);
-
     &_heading {
         padding: 15px 0 20px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
     &.active {
         transform: translateX(0);
     }
-
     &_item {
         margin-bottom: 20px;
     }
-
     &_link {
         font-family: 'Work Sans';
         font-weight: 700;

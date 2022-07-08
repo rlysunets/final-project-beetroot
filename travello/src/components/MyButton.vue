@@ -26,7 +26,7 @@ export default {
             type: String,
             default: "button"
         }
-    },
+    }
 }
 </script>
 
@@ -35,7 +35,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-
     cursor: pointer;
     background-color: #2194e6;
     width: 134px;
@@ -52,9 +51,9 @@ export default {
         background-color: #FFFFFF;
         outline: 2px solid #2194e6;
         transition: all .3s ease;
-        // svg {
-        //     fill: #2194e6;
-        // }
+        svg {
+            fill: #2194e6;
+        }
     }
 }
 </style>

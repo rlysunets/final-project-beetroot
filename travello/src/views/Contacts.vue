@@ -1,119 +1,81 @@
 <template>
-   <div>
-      <!-- contact us page-->
-      <div class="contacts">
-         <!-- intro section -->
-         <section class="intro_contacts">
+    <div class="contacts">
+        <!-- intro section -->
+        <!-- :style="backgroundStyles('../assets/images/contacts/hero.jpg')" -->
+        <intro title="Contact us" />
+
+        <!-- Get in touch section-->
+        <section-wrapper hint="Contact" title="Get in touch">
+            <Form />
+        </section-wrapper>
+
+        <!-- <section class="get_in_touch">
             <div class="container">
-               <div class="intro_contacts_wrap">
-                  <h2 class="intro_title page_title">Contact us</h2>
-               </div>
+                <div class="get_in_touch_wrap">
+                    <div class="get_in_touch_hint hint">Contact</div>
+                    <h2 class="get_in_touch_title section_title">Get in touch</h2>
+                    <form action="" class="form">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email">
+                        <input type="number" placeholder="Phone No.">
+                        <input type="text" placeholder="Subject">
+                        <textarea name="textarea" placeholder="Message"></textarea>
+                        <button class="btn form_button" type="button">Send message</button>
+                    </form>
+                </div>
             </div>
-         </section>
-      </div>
+        </section> -->
 
-
-      <!-- Get in touch section-->
-      <section class="get_in_touch">
-         <div class="container">
-            <div class="get_in_touch_wrap">
-               <div class="get_in_touch_hint hint">Contact</div>
-               <h2 class="get_in_touch_title section_title">Get in touch</h2>
-               <form action="" class="form">
-                  <input type="text" placeholder="Name">
-                  <input type="text" placeholder="Email">
-                  <input type="number" placeholder="Phone No.">
-                  <input type="text" placeholder="Subject">
-                  <textarea name="textarea" placeholder="Message"></textarea>
-                  <button class="btn form_button" type="button">Send message</button>
-               </form>
+        <!-- adress section -->
+        <!-- <div class="container">
+            <div class="address_cards">
+                <div class="card">
+                    <div class="card_icon">
+                        <img src="../assets/images/contacts/cil_location-pin.svg" alt="icon">
+                    </div>
+                    <div class="card_title">Address</div>
+                    <div class="card_text">Victoria Street, Green Avenue 882 Sydney Australia</div>
+                </div>
+                <div class="card">
+                    <div class="card_icon">
+                        <img src="../assets/images/contacts/ic_outline-email.svg" alt="icon">
+                    </div>
+                    <div class="card_title">Email</div>
+                    <div class="card_text">travello@gmail.com</div>
+                </div>
+                <div class="card">
+                    <div class="card_icon">
+                        <img src="../assets/images/contacts/akar-icons_phone.svg" alt="icon">
+                    </div>
+                    <div class="card_title">Phone</div>
+                    <div class="card_text">+422-233-4344</div>
+                </div>
             </div>
-         </div>
-      </section>
+        </div> -->
 
-
-      <!-- adress section -->
-      <div class="container">
-         <div class="address_cards">
-            <div class="card">
-               <div class="card_icon">
-                  <img src="../assets/images/contacts/cil_location-pin.svg" alt="icon">
-               </div>
-               <div class="card_title">Address</div>
-               <div class="card_text">Victoria Street, Green Avenue 882 Sydney Australia</div>
-            </div>
-            <div class="card">
-               <div class="card_icon">
-                  <img src="../assets/images/contacts/ic_outline-email.svg" alt="icon">
-               </div>
-               <div class="card_title">Email</div>
-               <div class="card_text">travello@gmail.com</div>
-            </div>
-            <div class="card">
-               <div class="card_icon">
-                  <img src="../assets/images/contacts/akar-icons_phone.svg" alt="icon">
-               </div>
-               <div class="card_title">Phone</div>
-               <div class="card_text">+422-233-4344</div>
-            </div>
-         </div>
-      </div>
-
-      <!-- map -->
-      <section class="map">
-
-      </section>
-   </div>
+        <!-- map -->
+        <section class="map"></section>
+    </div>
 </template>
 
 <script>
+import Intro from "@/components/Intro.vue"
+import SectionWrapper from "@/components/SectionWrapper.vue"
+import Form from "@/components/Form.vue"
 export default {
     name: "contacts",
+    components: {
+        Intro,
+        SectionWrapper,
+        Form
+    }
 }
 </script>
 
-<style lang="scss">
-
-.intro_contacts {
+<style lang="scss" scoped>
+.intro {
     background-image: url(../assets/images/contacts/hero.jpg);
-    background-color: #959c98;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-
-    &_wrap {
-        .intro_title {
-            padding: 210px 0 130px;
-        }
-    }
 }
-
-.get_in_touch {
-    // padding-top: 120px;
-    padding: 120px 0;
-
-    &_wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .get_in_touch_hint {
-            margin-bottom: 10px;
-        }
-
-        .get_in_touch_title {
-            margin-bottom: 60px;
-        }
-
-        .form {
-            max-width: 600px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-    }
-}
-
 input,
 textarea {
     padding: 12px 25px;
@@ -186,13 +148,13 @@ textarea {
 }
 
 .map {
-    background-image: url(../assets/images/contacts/maps.jpg);
+    // background-image: url(../assets/images/contacts/maps.jpg);
     background-color: #959c98;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+    // background-repeat: no-repeat;
+    // background-position: 50% 50%;
+    // background-size: cover;
+    // width: 100%;
+    // height: 100%;
 }
 
 </style>

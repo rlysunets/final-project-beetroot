@@ -8,13 +8,7 @@
                         The Travello company has over 30 years of professional experience in the field of outbound
                         tourism and offers only high-quality tour products on the tourist market.
                     </div>
-                    <!-- <div class="hero_button">
-                        <button type="button" class="btn">Get started</button>
-                    </div> -->
-
-                    <!-- <MyButton /> -->
-                    <my-button title="NE hello" icon="@/assets/images/arrow.svg"  />
-
+                    <my-button title="Get started" :is-icon="false"  />
                 </div>
             </div>
         </section>
@@ -25,7 +19,7 @@
 import MyButton from './MyButton.vue';
 
 export default {
-
+    name: "hero",
     components: {
         MyButton
     }

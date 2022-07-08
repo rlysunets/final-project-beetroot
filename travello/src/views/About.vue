@@ -1,15 +1,22 @@
 <template>
-  <div>
-    About
-  </div>
+    <div>
+        <intro title="About us" />
+    </div>
 </template>
 
 <script>
+import Intro from '../components/Intro.vue'
 export default {
-
+    components: {
+        Intro
+    },
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
+.intro {
+    background-image: url(../assets/images/about/hero.jpg);
+}
 
 </style>

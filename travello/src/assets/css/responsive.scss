@@ -118,8 +118,7 @@
         }
     }
     input {
-        max-width: none;
-        width: 100%;
+        flex-basis: 100%;
     }
 }
 @media screen and (max-width: 600px) {
