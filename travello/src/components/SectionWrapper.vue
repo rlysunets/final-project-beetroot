@@ -41,12 +41,6 @@ export default {
         align-items: center;
         .section_header {
             text-align: center;
-            .header_hint {
-                margin-bottom: 10px;
-            }
-            .header_title {
-                margin-bottom: 60px;
-            }
         }
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Intro title="Why choose us" bg="./images/why_choose_us/hero.jpg" />
+        <Intro title="Why choose us" bg="hero_why-choose-us.jpg" />
     </div>
 </template>
 

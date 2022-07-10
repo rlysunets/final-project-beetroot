@@ -1,6 +1,6 @@
 <template>
     <div>
-        <intro title="About us" bg="./images/about/hero.jpg" />
+        <intro title="About us" bg="hero_about.jpg" />
     </div>
 </template>
 

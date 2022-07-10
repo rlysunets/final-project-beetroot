@@ -1,5 +1,6 @@
 <template>
-    <section class="intro" :style="{ backgroundImage: `url('${bg}')` }">
+    <section class="intro" 
+        :style="`background-image: url(${require('@/assets/images/hero/' + bg)})`">
         <div class="container">
             <div class="intro_wrap">
                 <h2 class="intro_title">{{ title }}</h2>

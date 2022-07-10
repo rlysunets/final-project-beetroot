@@ -3,7 +3,7 @@
         <div class="address_cards">
             <div class="card" v-for="(item, i) in addressData" :key="i">
                 <div class="card_icon">
-                    <img :src="`./images/contacts/${item.icon}`" alt="">
+                    <img :src="require('@/assets/images/contacts/'+item.icon)" alt="">
                 </div>
                 <div class="card_title">{{ item.title }}</div>
                 <div class="card_text">{{ item.text }}</div>

@@ -19,7 +19,7 @@
 import MyButton from './MyButton.vue';
 
 export default {
-    name: "hero",
+    name: "Hero",
     components: {
         MyButton
     }

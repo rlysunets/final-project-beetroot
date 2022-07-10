@@ -1,6 +1,6 @@
 <template>
     <div class="contacts">
-        <intro title="Contact us" bg="./images/contacts/hero.jpg" />
+        <intro title="Contact us" bg="hero_contacts.jpg" />
 
         <!-- Get in touch section-->
         <section-wrapper hint="Contact" title="Get in touch">

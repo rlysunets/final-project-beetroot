@@ -1,6 +1,6 @@
 <template>
     <div class="tours">
-        <intro title="Tours" bg="./images/tours/hero.jpg" />
+        <intro title="Tours" bg="hero_tours.jpg" />
     </div>
 </template>
 
