@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 .section {
-    padding: 120px 0;
+    padding-top: 60px;
     &_wrapper {
         display: flex;
         flex-direction: column;

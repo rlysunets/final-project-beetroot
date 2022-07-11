@@ -17,8 +17,8 @@
                         <p> {{ p1 }} </p>
                         <p> {{ p2 }} </p>
                     </div>
-                    <div class="explore_button">
-                        <my-button title="Get started" :is-icon="true" />
+                    <div class="explore_button" v-if="button">
+                        <my-button title="Get started" :is-icon="true" @click="$router.push('/explores')" />
                     </div>
                 </div>
             </div>
@@ -27,8 +27,8 @@
 </template>
 
 <script>
+// import router from "vue-router"
 import MyButton from './MyButton.vue'
-
 
 export default {
     name: "Explore",
@@ -46,12 +46,10 @@ export default {
         hint: {
             type: String,
             default: "",
-            required: true
         },
         title: {
             type: String,
             default: "",
-            required: true
         },
         p1: {
             type: String,
@@ -61,6 +59,10 @@ export default {
         p2: {
             type: String,
             default: "",
+        },
+        button: {
+            type: Boolean,
+            default: true,
         }
     },
     components: {
@@ -70,27 +72,24 @@ export default {
 </script>
 
 <style lang="scss">
+
 .explore {
-    padding-top: 120px;
+    padding-bottom: 120px;
     &_wrap {
         display: flex;
+        gap: 10%;
         .explore_photos {
             position: relative;
-            flex-basis: 55%;
+            flex-basis: 45%;
             .pic {
-                max-width: 500px;
+                max-width: 480px;
             }
             .pic_positioned {
-                max-width: 386px;
+                width: 380px;
                 position: absolute;
                 left: 30%;
                 top: 40%;
             }
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
         .img_border {
             padding: 10px;
@@ -101,7 +100,7 @@ export default {
         }
         .explore_content {
             flex-basis: 45%;
-            padding: 20px 0 0 40px;
+            padding: 20px 0 0 60px;
             .explore_title {
                 margin-bottom: 20px;
             }
@@ -124,8 +123,9 @@ export default {
 
 @media screen and (max-width: 992px) {
     .explore {
-        padding-top: 60px;
+        padding-bottom: 60px;
         &_wrap {
+            gap: 0%;
             .explore_photos {
                 flex-basis: 50%;
                 .pic {
@@ -134,7 +134,7 @@ export default {
                 }
                 .pic_positioned {
                     position: static;
-                    max-width: 100%;
+                    width: 100%;
                 }
             }
             .explore_content {

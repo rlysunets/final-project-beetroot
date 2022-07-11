@@ -1,18 +1,16 @@
 <template>
-    <div>
-        <section class="hero">
-            <div class="container">
-                <div class="hero_wrap">
-                    <h2 class="hero_title">Explore new places with travello</h2>
-                    <div class="hero_descr">
-                        The Travello company has over 30 years of professional experience in the field of outbound
-                        tourism and offers only high-quality tour products on the tourist market.
-                    </div>
-                    <my-button title="Get started" :is-icon="false"  />
+    <section class="hero">
+        <div class="container">
+            <div class="hero_wrap">
+                <h2 class="hero_title">Explore new places with travello</h2>
+                <div class="hero_descr">
+                    The Travello company has over 30 years of professional experience in the field of outbound
+                    tourism and offers only high-quality tour products on the tourist market.
                 </div>
+                <my-button title="Get started" :is-icon="false"  />
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -28,6 +26,7 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
+    margin-bottom: 60px;
     background-image: url(@/assets/images/home/hero.jpg);
     background-color: #2194e6;
     background-repeat: no-repeat;

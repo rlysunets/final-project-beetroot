@@ -1,5 +1,6 @@
 <template>
-    <button :type="type" class="btn" @click="$.emit('click', type)">
+    <button :type="type" class="btn"
+        @click="$.emit('click', type)">
         <span> {{ title }} </span>
 
         <svg v-if="isIcon" width="11" height="11" viewBox="0 0 11 11" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -55,5 +56,8 @@ export default {
             fill: #2194e6;
         }
     }
+}
+.none {
+    display: none;
 }
 </style>

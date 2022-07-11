@@ -5,7 +5,9 @@
             <explore :key="i" v-if="i === 0" :image1="item.image1" :image2="item.image2" :hint="item.hint"
                 :title="item.title" :p1="item.p1" :p2="item.p2" />
         </template>
-
+        <cards-wrapper>
+            <card v-for="(item, i) in homeCardsData" :key="i" :img="item.img" :title="item.title" :descr="item.descr" />
+        </cards-wrapper>
     </div>
 </template>
 
@@ -13,12 +15,15 @@
 import axios from "axios"
 import Hero from '@/components/Hero.vue'
 import Explore from '@/components/Explore.vue'
+import Card from "@/components/Card.vue"
+import CardsWrapper from "@/components/CardsWrapper.vue"
 
 export default {
     name: "Home",
     data() {
         return {
-            exploreData: []
+            exploreData: [],
+            homeCardsData: []
         }
     },
     created() {
@@ -26,16 +31,23 @@ export default {
             .get("../data/explore.json")
             .then(resp => {
                 this.exploreData = resp.data
-                console.log(this.exploreData);
+            })
+
+        axios
+            .get("../data/homeCards.json")
+            .then(resp => {
+                this.homeCardsData = resp.data
             })
     },
     components: {
-        Hero,
-        Explore
-    }
+    Hero,
+    Explore,
+    Card,
+    CardsWrapper
+}
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>
