@@ -73,7 +73,7 @@ export default {
 <style lang="scss">
 
 .explore {
-    padding-bottom: 120px;
+    padding-bottom: 80px;
     &_wrap {
         display: flex;
         gap: 10%;

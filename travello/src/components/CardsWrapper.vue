@@ -16,7 +16,7 @@ export default {
 
 <style lang="scss">
 .cards {
-    // padding-bottom: 60px;
+    padding-bottom: 60px;
     &_wrap {
         display: flex;
         justify-content: space-around;

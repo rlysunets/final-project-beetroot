@@ -24,7 +24,7 @@ import Explore from '@/components/Explore.vue'
 import Card from "@/components/Card.vue"
 import CardsWrapper from "@/components/CardsWrapper.vue"
 import Travel from "@/components/Travel.vue"
-import Review from '../components/Review.vue'
+import Review from '@/components/Review.vue'
 
 export default {
     name: "Home",
