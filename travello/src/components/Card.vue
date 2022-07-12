@@ -15,7 +15,6 @@ export default {
         img: {
             type: String,
             default: "",
-            required: true
         },
         title: {
             type: String,
@@ -33,6 +32,8 @@ export default {
 
 <style lang="scss">
 .card {
+    margin-bottom: 60px;
+    cursor: pointer;
     flex-basis: 25%;
     padding: 40px 25px 30px;
     box-shadow: 0px 7px 29px rgba(100, 100, 111, 0.2);

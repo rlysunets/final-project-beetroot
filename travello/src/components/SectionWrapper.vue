@@ -7,6 +7,7 @@
                     <h2 class="header_title section_title">{{ title }}</h2>
                 </div>
                 <div class="section_body">
+                    <p>{{ descr }}</p>
                     <slot></slot>
                 </div>
             </div>
@@ -27,6 +28,10 @@ export default {
             type: String,
             default: "",
             required: true
+        },
+        descr: {
+            type: String,
+            default: ""
         }
     }
 }
@@ -41,6 +46,18 @@ export default {
         align-items: center;
         .section_header {
             text-align: center;
+        }
+        .section_body {
+            p {
+                max-width: 690px;
+                font-family: 'Work Sans';
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                text-align: center;
+                color: #FFFFFF;
+                margin-bottom: 30px;
+            }
         }
     }
 }

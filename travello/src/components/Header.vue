@@ -18,9 +18,9 @@
                         <li class="menu_item">
                             <router-link class="menu_link" to="/why-us">Why us</router-link>
                         </li>
-                        <li class="menu_item">
+                        <!-- <li class="menu_item">
                             <router-link class="menu_link" to="/trips">Trips</router-link>
-                        </li>
+                        </li> -->
                         <li class="menu_item">
                             <router-link class="menu_link" to="/tours">Tours</router-link>
                         </li>

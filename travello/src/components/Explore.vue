@@ -4,10 +4,10 @@
             <div class="explore_wrap">
                 <div class="explore_photos">
                     <div class="pic">
-                        <img class="img_border" :src="require('@/assets/images/explore/'+image1)" alt="photo">
+                        <img class="img_border" :src="require('@/assets/images/explore/'+image1)" :alt="title">
                     </div>
                     <div class="pic_positioned">
-                        <img class="img_border" :src="require('@/assets/images/explore/'+image2)" alt="photo">
+                        <img class="img_border" :src="require('@/assets/images/explore/'+image2)" :alt="title">
                     </div>
                 </div>
                 <div class="explore_content">
@@ -27,7 +27,6 @@
 </template>
 
 <script>
-// import router from "vue-router"
 import MyButton from './MyButton.vue'
 
 export default {
@@ -36,7 +35,7 @@ export default {
         image1: {
             type: String,
             default: "",
-            required: true
+            // required: true
         },
         image2: {
             type: String,
@@ -90,13 +89,6 @@ export default {
                 left: 30%;
                 top: 40%;
             }
-        }
-        .img_border {
-            padding: 10px;
-            border: 2px solid #E3DEC1;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
         .explore_content {
             flex-basis: 45%;

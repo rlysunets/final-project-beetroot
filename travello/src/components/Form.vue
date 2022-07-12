@@ -123,7 +123,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .form {
     max-width: 600px;
     display: flex;

@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .hero {
     margin-bottom: 60px;
     background-image: url(@/assets/images/home/hero.jpg);
@@ -49,6 +50,11 @@ export default {
             line-height: 150%;
             margin-bottom: 25px;
         }
+    }
+}
+@media screen and (min-width: 1700px) {
+    .hero {
+        background-position: 0 50%;
     }
 }
 </style>

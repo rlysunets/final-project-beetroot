@@ -56,8 +56,8 @@ export default {
             fill: #2194e6;
         }
     }
-}
-.none {
-    display: none;
+    span {
+        margin-right: 10px;
+    }
 }
 </style>

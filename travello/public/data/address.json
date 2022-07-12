@@ -1,17 +1,17 @@
 [
     {
-        "icon": "cil_location-pin.svg",
+        "img": "cil_location-pin.svg",
         "title": "Address",
-        "text": "Victoria Street, Green Avenue 882 Sydney Australia"
+        "descr": "Victoria Street, Green Avenue 882 Sydney Australia"
     },
     {
-        "icon": "ic_outline-email.svg",
+        "img": "ic_outline-email.svg",
         "title": "Email",
-        "text": "travello@gmail.com"
+        "descr": "travello@gmail.com"
     },
     {
-        "icon": "akar-icons_phone.svg",
+        "img": "akar-icons_phone.svg",
         "title": "Phone",
-        "text": "+422-233-4344"
+        "descr": "+422-233-4344"
     }
 ]
