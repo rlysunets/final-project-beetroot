@@ -28,7 +28,6 @@
 
 <script>
 import MyButton from './MyButton.vue'
-
 export default {
     name: "Explore",
     props: {
@@ -71,7 +70,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .explore {
     padding-bottom: 80px;
     &_wrap {
@@ -112,7 +110,6 @@ export default {
         }
     }
 }
-
 @media screen and (max-width: 992px) {
     .explore {
         padding-bottom: 60px;
@@ -136,7 +133,6 @@ export default {
         }
     }
 }
-
 @media screen and (max-width: 800px) {
     .explore {
         &_wrap {
@@ -151,5 +147,4 @@ export default {
         }
     }
 }
-
 </style>

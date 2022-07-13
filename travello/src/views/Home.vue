@@ -11,7 +11,7 @@
             <card v-for="(item, i) in homeCardsData" :key="i" :img="item.img" :title="item.title" :descr="item.descr" />
         </cards-wrapper>
 
-        <review />
+        <review-carousel />
 
         <travel />
     </div>
@@ -24,7 +24,7 @@ import Explore from '@/components/Explore.vue'
 import Card from "@/components/Card.vue"
 import CardsWrapper from "@/components/CardsWrapper.vue"
 import Travel from "@/components/Travel.vue"
-import Review from '@/components/Review.vue'
+import ReviewCarousel from "@/components/ReviewCarousel.vue"
 
 export default {
     name: "Home",
@@ -53,7 +53,7 @@ export default {
         Card,
         CardsWrapper,
         Travel,
-        Review
+        ReviewCarousel
     }
 }
 </script>
