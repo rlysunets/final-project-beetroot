@@ -17,9 +17,6 @@
         <section-wrapper hint="About us" title="Numbers speaks louder" class="numbers_bg">
             <numbers />
         </section-wrapper>
-
-
-
     </div>
 </template>
 
@@ -65,10 +62,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .intro {
-        margin-bottom: 60px;
-    }
-    .numbers_bg {
-        background-color: #B1DAF6;
-    }
+.intro {
+    margin-bottom: 60px;
+}
+
+.numbers_bg {
+    background-color: #B1DAF6;
+}
 </style>

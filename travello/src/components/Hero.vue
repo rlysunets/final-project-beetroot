@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import MyButton from './MyButton.vue';
+import MyButton from '@/components/MyButton.vue';
 
 export default {
     name: "Hero",
@@ -25,7 +25,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .hero {
     margin-bottom: 60px;
     background-image: url(@/assets/images/home/hero.jpg);

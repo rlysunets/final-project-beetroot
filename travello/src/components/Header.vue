@@ -133,7 +133,6 @@ header {
 .menu-mobile {
     display: none;
 }
-
 .menu-mobile {
     padding-left: 30px;
     position: fixed;
@@ -167,11 +166,9 @@ header {
         line-height: 2.625rem;
     }
 }
-
 .hidden {
     overflow: hidden;
 }
-
 #overlay {
     display: none;
     position: fixed;
@@ -182,7 +179,6 @@ header {
     height: 100%;
     background-color: #2e2e2e;
     opacity: .5;
-
     &.open {
         display: block;
         overflow: hidden;

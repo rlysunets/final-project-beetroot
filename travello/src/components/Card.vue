@@ -32,7 +32,6 @@ export default {
 
 <style lang="scss">
 .card {
-
     cursor: pointer;
     flex-basis: 25%;
     padding: 40px 25px 30px;

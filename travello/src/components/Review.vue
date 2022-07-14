@@ -19,7 +19,8 @@
 </template>
 
 <script>
-import MyButton from './MyButton.vue'
+import MyButton from '@/components/MyButton.vue'
+
 export default {
     name: "Review",
     props: {
@@ -59,7 +60,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .reviews_wrap {
     display: flex;
     justify-content: space-around;

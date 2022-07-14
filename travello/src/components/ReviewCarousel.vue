@@ -20,7 +20,7 @@
 import axios from 'axios'
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Navigation } from 'vue3-carousel';
-import Review from './Review.vue';
+import Review from '@/components/Review.vue';
 
 export default {
     name: "ReviewCarousel",

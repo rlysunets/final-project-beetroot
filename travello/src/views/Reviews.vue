@@ -34,10 +34,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
-    .mb {
-        &:not(:last-child) {
-            margin-bottom: 30px;
-        }
+<style lang="scss" scoped>
+.mb {
+    &:not(:last-child) {
+        margin-bottom: 30px;
     }
+}
 </style>
