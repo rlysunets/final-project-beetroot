@@ -17,6 +17,10 @@
         <section-wrapper hint="About us" title="Numbers speaks louder" class="numbers_bg">
             <numbers />
         </section-wrapper>
+
+        <section-wrapper hint="About us" title="Gallery">
+            <!-- <gallery /> -->
+        </section-wrapper>
     </div>
 </template>
 
@@ -28,6 +32,7 @@ import SectionWrapper from '@/components/SectionWrapper.vue'
 import CardsWrapper from '@/components/CardsWrapper.vue'
 import Card from '@/components/Card.vue'
 import Numbers from '@/components/Numbers.vue'
+import Gallery from '@/components/Gallery.vue'
 
 export default {
     name: "About",
@@ -57,6 +62,7 @@ export default {
         CardsWrapper,
         Card,
         Numbers,
+        Gallery
     }
 }
 </script>
@@ -65,7 +71,6 @@ export default {
 .intro {
     margin-bottom: 60px;
 }
-
 .numbers_bg {
     background-color: #B1DAF6;
 }

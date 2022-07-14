@@ -30,7 +30,7 @@ export default {
             settings: {
                 itemsToShow: 1,
                 snapAlign: 'center',
-                autoplay: 50000,
+                autoplay: 5000,
                 transition: 2000,
                 wrapAround: true,
             }

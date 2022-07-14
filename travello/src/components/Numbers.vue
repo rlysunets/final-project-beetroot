@@ -34,14 +34,14 @@ export default {
         }
     },
     methods: {
-        start1() {
+        start() {
             for (let i in this.$refs) {
                 this.$refs[i][0].start()
             }
         },
         startCounters() {
             if (window.scrollY > this.numbersOffset) {
-                this.start1()
+                this.start()
                 window.removeEventListener("scroll", this.startCounters)
             }
         }
