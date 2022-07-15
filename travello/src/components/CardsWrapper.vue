@@ -1,11 +1,11 @@
 <template>
-    <section class="cards">
+    <div class="cards">
         <div class="container">
             <div class="cards_wrap">
                 <slot></slot>
             </div>
         </div>
-    </section>
+    </div>
 </template>
 
 <script>

@@ -10,6 +10,8 @@
             <card v-for="(item, i) in addressData" :key="i" :img="item.img" :title="item.title" :descr="item.descr" />
         </cards-wrapper>
 
+        <map />
+
     </div>
 </template>
 
@@ -20,6 +22,8 @@ import SectionWrapper from "@/components/SectionWrapper.vue"
 import Form from "@/components/Form.vue"
 import CardsWrapper from '@/components/CardsWrapper.vue'
 import Card from '@/components/Card.vue'
+import Map from '@/components/Map.vue'
+
 export default {
     name: "contacts",
     data() {
@@ -39,7 +43,8 @@ export default {
         SectionWrapper,
         Form,
         CardsWrapper,
-        Card
+        Card,
+        Map
     }
 }
 </script>

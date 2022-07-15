@@ -14,12 +14,12 @@
             </cards-wrapper>
         </section-wrapper>
 
-        <section-wrapper hint="About us" title="Numbers speaks louder" class="numbers_bg">
+        <section-wrapper hint="About us" title="Numbers speaks louder" class="blue_bg">
             <numbers />
         </section-wrapper>
 
         <section-wrapper hint="About us" title="Gallery">
-            <!-- <gallery /> -->
+            <gallery />
         </section-wrapper>
     </div>
 </template>
@@ -70,8 +70,5 @@ export default {
 <style lang="scss" scoped>
 .intro {
     margin-bottom: 60px;
-}
-.numbers_bg {
-    background-color: #B1DAF6;
 }
 </style>

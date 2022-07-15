@@ -1,10 +1,18 @@
 <template>
-    <lightgallery :settings="{ speed: 500, plugins: plugins }" :onInit="onInit" :onBeforeSlide="onBeforeSlide">
-        <template v-for="(item, i) in galleryData" :key="i">
-            <a :href="require('@/assets/images/gallery/'+item.image)">
-                <img :src="require('@/assets/images/gallery/'+item.image)" alt="image" />
-            </a>
-        </template>
+    <!-- v-for="(item, i) in galleryData|| []" :key="i" -->
+    <lightgallery :settings="{ speed: 500, plugins: plugins }">
+        <!-- <a :href="require('@/assets/images/gallery/'+item.image)">
+            <img :src="require('@/assets/images/gallery/'+item.image)" alt="image" />
+        </a> -->
+        <a href="../assets/images/gallery/gallery1.jpg">
+            <img src="../assets//images/gallery/gallery1.jpg" alt="image" />
+        </a>
+        <!-- <a href="@/assets/images/gallery/image1.jpg">
+            <img src="@/assets/images/gallery/image1.jpg" alt="image" />
+        </a>
+        <a href="@/assets/images/gallery/image1.jpg">
+            <img src="@/assets/images/gallery/image1.jpg" alt="image" />
+        </a> -->
     </lightgallery>
 </template>
 
@@ -23,19 +31,12 @@ export default {
         }
     },
     created() {
+        console.log(this.galleryData);
         axios
             .get("../data/gallery.json")
             .then(resp => {
                 this.galleryData = resp.data
             })
-    },
-    methods: {
-        onInit: () => {
-            console.log('lightGallery has been initialized');
-        },
-        onBeforeSlide: () => {
-            console.log('calling before slide');
-        },
     },
     components: {
         Lightgallery,

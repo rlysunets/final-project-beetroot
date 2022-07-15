@@ -1,19 +1,17 @@
 <template>
-    <div>
-        <section class="reviews">
-            <div class="container">
-                <carousel v-if="reviewsData.length !==0" :settings="settings">
-                    <slide v-for="(item) in reviewsData" :key="item">
-                        <review :image="item.image" :hint="item.hint" :title="item.title" :descr="item.descr"
-                        :name="item.name" :date="item.date" />
-                    </slide>
-                    <template #addons>
-                        <navigation />
-                    </template>
-                </carousel>
-            </div>
-        </section>
-    </div>
+    <section class="reviews">
+        <div class="container">
+            <carousel v-if="reviewsData.length !==0" :settings="settings">
+                <slide v-for="(item) in reviewsData" :key="item">
+                    <review :image="item.image" :hint="item.hint" :title="item.title" :descr="item.descr"
+                    :name="item.name" :date="item.date" />
+                </slide>
+                <template #addons>
+                    <navigation />
+                </template>
+            </carousel>
+        </div>
+    </section>
 </template>
 
 <script>
