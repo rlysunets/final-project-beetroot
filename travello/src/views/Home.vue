@@ -2,11 +2,13 @@
     <div>
         <hero />
 
-        <template v-for="(item, i) in exploreData">
-            <explore :key="i" v-if="i === 0" :image1="item.image1" :image2="item.image2" :hint="item.hint"
-                :title="item.title" :p1="item.p1" :p2="item.p2" />
-        </template>
-        
+        <div class="container">
+            <template v-for="(item, i) in exploreData" :key="i">
+                <explore :key="i" v-if="i === 0" :image1="item.image1" :image2="item.image2" :hint="item.hint"
+                    :title="item.title" :p1="item.p1" :p2="item.p2" />
+            </template>
+        </div>
+
         <cards-wrapper>
             <card v-for="(item, i) in homeCardsData" :key="i" :img="item.img" :title="item.title" :descr="item.descr" />
         </cards-wrapper>

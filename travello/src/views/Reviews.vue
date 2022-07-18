@@ -1,8 +1,9 @@
 <template>
-    <div>
+    <div class="reviews">
         <section-wrapper title="Customer Reviews" hint="What they say">
             <div v-for="(item, i) in reviewsData" :key="i" class="mb">
-                <review :image="item.image" :descr="item.descr" :name="item.name" :date="item.date" :button="false" />
+                <review :class="{'reverse': i % 2 !== 0}" :image="item.image" :descr="item.descr" :name="item.name"
+                    :date="item.date" :button="false" />
             </div>
         </section-wrapper>
     </div>
@@ -35,6 +36,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.reviews {
+    padding-top: 50px;
+}
 .mb {
     &:not(:last-child) {
         margin-bottom: 30px;

@@ -125,11 +125,10 @@ export default {
 </script>
 
 <style lang="scss">
-
 footer {
+    // background-color: rgba(85, 183, 255, .7);
     background: #000;
 }
-
 .footer {
     padding: 64px 0;
     font-family: 'Josefin Sans';
@@ -148,19 +147,15 @@ footer {
         text-align: center;
     }
 }
-
 .footer_menu {
     padding: 15px 20px;
-
     .menu_title {
         margin-bottom: 25px;
     }
-
     .munu_list {
         display: flex;
         flex-direction: column;
         gap: 10px;
-
         .menu_link {
             font-weight: 400;
             font-size: 14px;
@@ -170,7 +165,6 @@ footer {
                 font-weight: 500;
                 opacity: 1;
             }
-
             &:hover {
                 border-bottom: 1px solid #FFFFFF;
                 padding-bottom: 2px;
@@ -178,13 +172,11 @@ footer {
             }
         }
     }
-
     .socials {
         display: flex;
         gap: 25px;
     }
 }
-
 .contacts {
     ul li span {
         font-size: 14px;
@@ -192,6 +184,30 @@ footer {
         font-weight: 400;
         opacity: 0.8;
         margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .footer {
+        &_content {
+            flex-wrap: wrap;
+            .footer_logo {
+                flex: 100%;
+                margin-bottom: 25px;
+            }
+            .footer_menu {
+                padding: 0 20px 20px 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 750px) {
+    .footer {
+        &_content {
+            .footer_menu {
+                flex: 50%;
+                padding: 0 20px 20px 0;
+            }
+        }
     }
 }
 </style>

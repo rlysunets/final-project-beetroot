@@ -1,9 +1,10 @@
 <template>
-    <div>
+    <div class="explores">
         <section-wrapper title="Explore world with us" hint="Explore">
-            <div v-for="item in exploreData" :key="item">
-                <explore :image1="item.image1" :image2="item.image2" :p1="item.p1" :p2="item.p2" :button="false" />
-            </div>
+            <template v-for="(item, i) in exploreData" :key="i">
+                <explore :class="{ 'reverse': i % 2 !== 0 }" :image1="item.image1"
+                    :image2="item.image2" :p1="item.p1" :p2="item.p2" :button="false" />
+            </template>
         </section-wrapper>
     </div>
 </template>
@@ -28,12 +29,17 @@ export default {
             })
     },
     components: {
-    Explore,
-    SectionWrapper
-}
+        Explore,
+        SectionWrapper
+    }
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+.explores {
+    padding-top: 50px;
+}
+.reverse {
+    flex-direction: row-reverse;
+}
 </style>

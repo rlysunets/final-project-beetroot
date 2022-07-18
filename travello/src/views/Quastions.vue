@@ -1,19 +1,21 @@
 <template>
-    <section-wrapper title="Frequently asked questions" hint="Any more questions?">
-        <div class="accordion_wrap">
-            <template v-for="(item, i) in faqData" :key="i">
-                <div class="accordion_item">
-                    <accordion :question="item.question" :answer="item.answer" />
-                </div>
-            </template>
-        </div>
-        <div class="ask">
-            <div class="ask_question">Still have questions?</div>
-            <div class="ask_button">
-                <my-button title="Contact us" :is-icon="true" @click="$router.push('/contacts')" />
+    <div class="questions">
+        <section-wrapper title="Frequently asked questions" hint="Any more questions?">
+            <div class="accordion_wrap">
+                <template v-for="(item, i) in faqData" :key="i">
+                    <div class="accordion_item">
+                        <accordion :question="item.question" :answer="item.answer" />
+                    </div>
+                </template>
             </div>
-        </div>
-    </section-wrapper>
+            <div class="ask">
+                <div class="ask_question">Still have questions?</div>
+                <div class="ask_button">
+                    <my-button title="Contact us" :is-icon="true" @click="$router.push('/contacts')" />
+                </div>
+            </div>
+        </section-wrapper>
+    </div>
 </template>
 
 <script>
@@ -45,9 +47,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
-
+.questions {
+    padding-top: 50px;
+}
 .accordion_wrap {
     width: 700px;
     .accordion_item {

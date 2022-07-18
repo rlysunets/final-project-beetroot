@@ -25,3 +25,13 @@
 .blue_bg {
     background-color: #B1DAF6;
 }
+.reverse {
+    flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 600px) {
+    .section_title {
+        font-size: 36px;
+        line-height: 50px;
+    }
+}

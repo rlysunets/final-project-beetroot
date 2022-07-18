@@ -1,13 +1,13 @@
 <template>
-    <section class="explore">
-        <div class="container">
+    <!-- <div class="explore"> -->
+        <!-- <div class="container"> -->
             <div class="explore_wrap">
                 <div class="explore_photos">
                     <div class="pic">
                         <img class="img_border" :src="require('@/assets/images/explore/'+image1)" :alt="title">
                     </div>
                     <div class="pic_positioned">
-                        <img class="img_border" :src="require('@/assets/images/explore/'+image2)" :alt="title">
+                        <img class="img_border" :src="require('@/assets/images/explore/' + image2)" :alt="title">
                     </div>
                 </div>
                 <div class="explore_content">
@@ -22,8 +22,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        <!-- </div> -->
+    <!-- </div> -->
 </template>
 
 <script>
@@ -70,81 +70,81 @@ export default {
 </script>
 
 <style lang="scss">
-.explore {
+
+.explore_wrap {
     padding-bottom: 80px;
-    &_wrap {
-        display: flex;
-        gap: 10%;
-        .explore_photos {
-            position: relative;
-            flex-basis: 45%;
-            .pic {
-                max-width: 480px;
-            }
-            .pic_positioned {
-                width: 380px;
-                position: absolute;
-                left: 30%;
-                top: 40%;
-            }
+    display: flex;
+    justify-content: space-between;
+    .explore_photos {
+        position: relative;
+        flex-basis: 60%;
+        .pic {
+            max-width: 480px;
+            right: 0;
         }
-        .explore_content {
-            flex-basis: 45%;
-            padding: 20px 0 0 60px;
-            .explore_title {
-                margin-bottom: 20px;
-            }
-            .explore_descr {
-                margin-bottom: 20px;
-                p {
-                    font-family: 'Work Sans';
-                    font-weight: 400;
-                    font-size: 18px;
-                    line-height: 150%;
-                    color: #333333;
-                    &:not(:last-child) {
-                        margin-bottom: 20px;
-                    }
+        .pic_positioned {
+            width: 380px;
+            position: absolute;
+            left: 30%;
+            top: 40%;
+        }
+    }
+    .explore_content {
+        flex-basis: 40%;
+        padding: 0 25px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .explore_title {
+            margin-bottom: 20px;
+        }
+        .explore_descr {
+            margin-bottom: 20px;
+            p {
+                text-align: justify;
+                font-family: 'Work Sans';
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                color: #333333;
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
                 }
             }
         }
     }
 }
+
 @media screen and (max-width: 992px) {
-    .explore {
-        padding-bottom: 60px;
-        &_wrap {
-            gap: 0%;
-            .explore_photos {
-                flex-basis: 50%;
-                .pic {
-                    max-width: 100%;
-                    margin-bottom: 20px;
-                }
-                .pic_positioned {
-                    position: static;
-                    width: 100%;
-                }
+    .explore_wrap {
+        padding-bottom: 40px;
+        .explore_photos {
+            .pic {
+                max-width: 100%;
+                margin-bottom: 20px;
             }
-            .explore_content {
-                flex-basis: 50%;
-                padding: 0 0 0 20px;
+            .pic_positioned {
+                position: static;
+                width: 100%;
             }
+        }
+        .explore_content {
+            flex-basis: 50%;
         }
     }
 }
 @media screen and (max-width: 800px) {
-    .explore {
-        &_wrap {
-            flex-wrap: wrap;
-            .explore_photos {
-                flex-basis: 100%;
-            }
-            .explore_content {
-                flex-basis: 100%;
-                padding: 20px 0 0 0;
-            }
+    .explore_wrap {
+        flex-wrap: wrap;
+        .explore_photos {
+            flex-basis: 100%;
+        }
+        .explore_content {
+            flex-basis: 100%;
+            padding: 20px 0;
         }
     }
 }
+
 </style>

@@ -1,19 +1,42 @@
 <template>
     <div>
         <form method="post" class="form" @submit.prevent="checkAndSend">
-            <input type="text" placeholder="Name" v-model="name">
-            <input type="text" placeholder="Email" v-model="email">
-            <input type="number" placeholder="Phone No." v-model="phone">
-            <input type="text" placeholder="Subject" v-model="subject">
-            <textarea name="textarea" placeholder="Message" v-model="message"></textarea>
+            <div class="input_wrap">
+                <div class="error">{{ error.name }}</div>
+                <input type="text" id="name" :class="{ 'invalid': error.name }" v-model="name"
+                    @focus="resetError('name')">
+                <label for="name">Name</label>
+            </div>
+            <div class="input_wrap">
+                <div class="error">{{ error.email }}</div>
+                <input type="text" id="email" :class="{ 'invalid': error.email }" v-model="email"
+                    @focus="resetError('email')">
+                <label for="email">Email</label>
+            </div>
+            <div class="input_wrap">
+                <div class="error">{{ error.phone }}</div>
+                <input type="number" id="phone" :class="{ 'invalid': error.phone }" v-model="phone"
+                    @focus="resetError('phone')">
+                <label for="phone">Phone No</label>
+            </div>
+            <div class="input_wrap">
+                <input type="text" id="subject" :class="{ 'invalid': error.subject }" v-model="subject"
+                    @focus="resetError('subject')">
+                <label for="subject">Subject</label>
+                <div class="error">{{ error.subject }}</div>
+            </div>
+            <div class="textarea_wrap">
+                <textarea name="textarea" id="message" :class="{ 'invalid': error.message }" v-model="message"
+                    @focus="resetError('message')"></textarea>
+                <label for="message">Message</label>
+                <div class="error">{{ error.message }}</div>
+            </div>
             <button class="btn form_button" type="submit">Send message</button>
         </form>
-
         <modal-window v-if="showModal" @close="showModal = false">
             <template #body v-if="answer.success === null">{{ msg }}</template>
             <template #body v-else>{{ answer.msg }}</template>
         </modal-window>
-
     </div>
 </template>
 
@@ -35,7 +58,13 @@ export default {
             subject: "",
             message: "",
             showModal: false,
-            msg: "",
+            error: {
+                name: "",
+                email: "",
+                phone: "",
+                subject: "",
+                message: "",
+            },
             answer: {
                 success: null,
                 msg: ""
@@ -45,43 +74,35 @@ export default {
     methods: {
         checkAndSend() {
             let valid = true
-            if (this.message === "") {
-                this.msg = "Enter message text"
-                this.showModal = true
+            if (this.name === "") {
+                this.error.name = "Enter your name"
                 valid = false
             }
-            if (this.subject === "") {
-                this.msg = "Enter subject text"
-                this.showModal = true
-                valid = false
-            }
-            if (this.phone === "") {
-                this.msg = "Enter your phone number"
-                this.showModal = true
+            if (this.name.length === 1) {
+                this.error.name = "Minimal length is two chars"
                 valid = false
             }
             if (this.email === "") {
-                this.msg = "Enter your email"
-                this.showModal = true
+                this.error.email = "Enter your email"
                 valid = false
             } else {
                 if (this.isValidEmail(this.email) === false) {
-                    this.msg = "Enter your email"
-                    this.showModal = true
+                    this.error.email = "Enter your email"
                     valid = false
                 }
             }
-            if (this.name.length === 1) {
-                this.msg = "Minimal name length is two chars"
-                this.showModal = true
+            if (this.phone === "") {
+                this.error.phone = "Enter your phone number"
                 valid = false
             }
-            if (this.name === "") {
-                this.msg = "Enter your name"
-                this.showModal = true
+            if (this.subject === "") {
+                this.error.subject = "Enter subject text"
                 valid = false
             }
-
+            if (this.message === "") {
+                this.error.message = "Enter message text"
+                valid = false
+            }
             if (valid) {
                 const message_text = "<i>Feedback data</i>" +
                     "%0a<b>Name: </b>" + this.name +
@@ -89,7 +110,6 @@ export default {
                     "%0a<b>Phone: </b>" + this.phone +
                     "%0a<b>Subject: </b>" + this.subject +
                     "%0a<b>Message: </b>" + this.message
-
                 fetch(`https://api.telegram.org/bot${this.API_BOT_ID}/sendMessage?chat_id=${this.CHAT_ID}&text=${message_text}&parse_mode=HTML`)
                     .then(resp => {
                         return resp.json()
@@ -113,6 +133,9 @@ export default {
                     })
             }
         },
+        resetError(field) {
+            this.error[field] = ""
+        },
         isValidEmail(email) {
             return Boolean(email.match(
                 /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -123,34 +146,86 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .form {
     max-width: 600px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    .input_wrap {
+        flex-basis: 45%;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .textarea_wrap {
+        height: 110px;
+        position: relative;
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
     &_button {
         padding: 10px 0;
         width: 100%;
         text-transform: uppercase;
     }
-    input,
-    textarea {
-        padding: 12px 25px;
-        border: 2px solid #2094E6;
-        font-family: 'Work Sans';
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 23px;
-        color: #666666;
-        outline: none;
-    }
-    input {
-        width: 290px;
-    }
-    textarea {
-        flex-basis: 100%;
-        height: 110px;
-        resize: none;
+}
+input,
+textarea {
+    padding: 12px 20px;
+    border: 2px solid #2094E6;
+    background-color: transparent;
+    border-radius: 5px;
+    font-family: 'Work Sans';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    color: #666666;
+    outline: none;
+}
+.invalid {
+    border: 2px solid red;
+}
+input {
+    width: 290px;
+}
+textarea {
+    width: 100%;
+    height: 110px;
+    resize: none;
+}
+.input_wrap label,
+.textarea_wrap label {
+    padding: 0 4px;
+    font-family: 'Work Sans';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    color: #666666;
+    background-color: #fff;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+}
+.error {
+    position: absolute;
+    bottom: -8px;
+    left: 10px;
+    padding: 0 4px;
+    font-family: 'Work Sans';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    color: red;
+    background-color: #fff;
+}
+@media screen and (max-width: 667px) {
+    .form {
+        .input_wrap {
+            flex-basis: 100%;
+            input {
+                width: 100%;
+            }
+        }
     }
 }
 </style>

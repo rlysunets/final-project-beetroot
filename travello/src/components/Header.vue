@@ -18,11 +18,11 @@
                         <li class="menu_item">
                             <router-link class="menu_link" to="/why-us">Why us</router-link>
                         </li>
-                        <!-- <li class="menu_item">
-                            <router-link class="menu_link" to="/trips">Trips</router-link>
-                        </li> -->
                         <li class="menu_item">
                             <router-link class="menu_link" to="/tours">Tours</router-link>
+                        </li>
+                        <li class="menu_item">
+                            <router-link class="menu_link" to="/news">News</router-link>
                         </li>
                     </ul>
                 </nav>
@@ -31,7 +31,7 @@
                 </div>
 
                 <!-- burger menu -->
-                <div class="burger">
+                <div class="burger" @click="openMenu">
                     <button class="hamburger hamburger--slider" type="button">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
@@ -58,22 +58,21 @@
                             </button>
                         </div>
                     </div>
-
                     <ul class="menu-mobile_list">
                         <li class="menu-mobile_item">
-                            <a href="#" class="menu-mobile_link">Home</a>
+                            <router-link class="menu-mobile_link" to="/">Home</router-link>
                         </li>
                         <li class="menu-mobile_item">
-                            <a href="#" class="menu-mobile_link">About</a>
+                            <router-link class="menu-mobile_link" to="/about">About</router-link>
                         </li>
                         <li class="menu-mobile_item">
-                            <a href="#" class="menu-mobile_link">Why us</a>
+                            <router-link class="menu-mobile_link" to="/why-us">Why us</router-link>
                         </li>
                         <li class="menu-mobile_item">
-                            <a href="#" class="menu-mobile_link">Trips</a>
+                            <router-link class="menu-mobile_link" to="/tours">Tours</router-link>
                         </li>
                         <li class="menu-mobile_item">
-                            <a href="#" class="menu-mobile_link">Tours</a>
+                            <router-link class="menu-mobile_link" to="/news">News</router-link>
                         </li>
                     </ul>
                 </nav>
@@ -83,10 +82,25 @@
 </template>
 
 <script>
-// import router from "vue-router"
 import MyButton from "./MyButton.vue"
 export default {
     name: "Header",
+    created() {
+        window.addEventListener("scroll", this.addHeaderBg)
+    },
+    methods: {
+        addHeaderBg() {
+            if (window.scrollY > 150) {
+                document.querySelector("#header").classList.add("header_bg")
+            } else {
+                document.querySelector("#header").classList.remove("header_bg")
+            }
+        },
+        openMenu() {
+            console.log("open");
+            document.querySelector(".menu-mobile").classList.toggle("active")
+        }
+    },
     components: {
         MyButton
     },
@@ -94,9 +108,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-header {
-    // background-color: transparent;
-    background-color: #000;
+
+@import "../assets/css/humburger.scss";
+#header {
+    background-color: rgba(85, 183, 255, .7);
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.header_bg {
+    height: 60px;
+    box-shadow: 0 0 10px #FFF;
+    backdrop-filter: blur(10px);
+}
+.hide {
+    transform: translateY(-100%);
 }
 .header {
     font-family: 'Work Sans';
@@ -105,16 +135,17 @@ header {
     line-height: 100%;
     color: #FFFFFF;
     display: flex;
-    gap: 82px;
+    gap: 70px;
     align-items: center;
     height: 80px;
     &_logo {
         flex: 1 1 auto;
+        min-width: 167px;
     }
     &_menu {
         .menu_list {
             display: flex;
-            gap: 48px;
+            gap: 25px;
             .menu_item {
                 .menu_link {
                     &:hover {
@@ -127,7 +158,6 @@ header {
         }
     }
 }
-
 /* burger & mobile menu styles ============================================= */
 .burger,
 .menu-mobile {
@@ -184,8 +214,25 @@ header {
         overflow: hidden;
     }
 }
-
 .none {
     display: none;
+}
+@media screen and (max-width: 992px) {
+    .header {
+        // gap: 40px;
+
+        .header_menu {
+            display: none;
+        }
+
+        .burger {
+            display: block;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .header_button {
+        display: none;
+    }
 }
 </style>

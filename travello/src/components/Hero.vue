@@ -56,4 +56,26 @@ export default {
         background-position: 0 50%;
     }
 }
+@media screen and (max-width: 750px) {
+    .hero {
+        &_wrap {
+            .hero_title {
+                font-size: 42px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .hero {
+        &_wrap {
+            padding: 180px 0 70px;
+            .hero_title {
+                font-size: 32px;
+            }
+            .hero_descr {
+                line-height: 130%;
+            }
+        }
+    }
+}
 </style>

@@ -68,7 +68,7 @@ export default {
         flex-direction: column;
         text-align: left;
         flex-basis: 45%;
-        padding: 10px 60px 10px 40px;
+        padding: 10px 20px;
         .review_hint {
             margin-bottom: 10px;
         }

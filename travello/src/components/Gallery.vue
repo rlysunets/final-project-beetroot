@@ -1,19 +1,17 @@
 <template>
-    <!-- v-for="(item, i) in galleryData|| []" :key="i" -->
-    <lightgallery :settings="{ speed: 500, plugins: plugins }">
-        <!-- <a :href="require('@/assets/images/gallery/'+item.image)">
-            <img :src="require('@/assets/images/gallery/'+item.image)" alt="image" />
-        </a> -->
-        <a href="../assets/images/gallery/gallery1.jpg">
-            <img src="../assets//images/gallery/gallery1.jpg" alt="image" />
-        </a>
-        <!-- <a href="@/assets/images/gallery/image1.jpg">
-            <img src="@/assets/images/gallery/image1.jpg" alt="image" />
-        </a>
-        <a href="@/assets/images/gallery/image1.jpg">
-            <img src="@/assets/images/gallery/image1.jpg" alt="image" />
-        </a> -->
-    </lightgallery>
+    <div class="gallery">
+        <div class="container">
+            <div class="gallery_wrap">
+                <lightgallery class="gallery" v-if="galleryData.length !== 0" :settings="{ plugins: plugins }">
+                    <template v-for="(item, i) in galleryData" :key="i">
+                        <a :href="require('@/assets/images/gallery/'+item.img)">
+                            <img :src="require('@/assets/images/gallery/'+item.img)" :alt="item.alt" />
+                        </a>
+                    </template>
+                </lightgallery>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -31,7 +29,6 @@ export default {
         }
     },
     created() {
-        console.log(this.galleryData);
         axios
             .get("../data/gallery.json")
             .then(resp => {
@@ -46,8 +43,37 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
-    @import 'lightgallery/css/lightgallery.css';
-    @import 'lightgallery/css/lg-thumbnail.css';
-    @import 'lightgallery/css/lg-zoom.css';
+<style lang="scss" scoped>
+@import 'lightgallery/css/lightgallery.css';
+@import 'lightgallery/css/lg-thumbnail.css';
+@import 'lightgallery/css/lg-zoom.css';
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    a {
+        flex-basis: 31%;
+        max-height: 300px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .gallery {
+        a {
+            flex-basis: 48%;
+        }
+    }
+}
+@media screen and (max-width: 650px) {
+    .gallery {
+        a {
+            flex-basis: 100%;
+        }
+    }
+}
 </style>

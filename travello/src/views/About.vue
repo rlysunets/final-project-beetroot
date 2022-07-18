@@ -2,10 +2,12 @@
     <div>
         <intro title="About us" bg="hero_about.jpg" />
 
-        <template v-for="(item, i) in exploreData">
-            <explore :key="i" v-if="i === 1" :image1="item.image1" :image2="item.image2" :hint="item.hint"
-                :title="item.title" :p1="item.p1" :p2="item.p2" />
-        </template>
+        <div class="container">
+            <template v-for="(item, i) in exploreData">
+                <explore :key="i" v-if="i === 1" :image1="item.image1" :image2="item.image2" :hint="item.hint"
+                    :title="item.title" :p1="item.p1" :p2="item.p2" />
+            </template>
+        </div>
 
         <section-wrapper hint="About us" title="Why choose us">
             <cards-wrapper>

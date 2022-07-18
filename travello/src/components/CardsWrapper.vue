@@ -23,4 +23,20 @@ export default {
         gap: 20px;
     }
 }
+@media screen and (max-width: 900px) {
+    .cards_wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+        .card {
+            flex-basis: 45%;
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    .cards_wrap {
+        .card {
+            flex-basis: 100%;
+        }
+    }
+}
 </style>

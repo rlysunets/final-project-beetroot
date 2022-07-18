@@ -33,8 +33,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
 .benefits {
     max-width: 650px;
     display: flex;
