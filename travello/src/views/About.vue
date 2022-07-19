@@ -28,13 +28,13 @@
 
 <script>
 import axios from "axios"
-import Intro from '@/components/Intro.vue'
-import Explore from '@/components/Explore.vue'
-import SectionWrapper from '@/components/SectionWrapper.vue'
-import CardsWrapper from '@/components/CardsWrapper.vue'
-import Card from '@/components/Card.vue'
-import Numbers from '@/components/Numbers.vue'
-import Gallery from '@/components/Gallery.vue'
+import Intro from '@/components/sections/Intro.vue'
+import Explore from '@/components/sections/Explore.vue'
+import SectionWrapper from '@/components/wrappers/SectionWrapper.vue'
+import CardsWrapper from '@/components/wrappers/CardsWrapper.vue'
+import Card from '@/components/general/Card.vue'
+import Numbers from '@/components/modules/Numbers.vue'
+import Gallery from '@/components/modules/Gallery.vue'
 
 export default {
     name: "About",

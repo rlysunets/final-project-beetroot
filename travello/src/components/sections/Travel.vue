@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import MyButton from './MyButton.vue'
-import SectionWrapper from './SectionWrapper.vue'
+import MyButton from '@/components/general/MyButton.vue'
+import SectionWrapper from '@/components/wrappers/SectionWrapper.vue'
 export default {
     components: {
         SectionWrapper,
@@ -22,7 +22,7 @@ export default {
 
 .travel {
     padding: 120px 0;
-    background-image: url(../assets/images/travel/travel.jpg);
+    background-image: url(@/assets/images/travel/travel.jpg);
     background-color: rgba(0, 0, 0, .6);
     background-repeat: no-repeat;
     background-position: 50% 50%;

@@ -9,9 +9,10 @@
 </template>
 
 <script>
-import Intro from "@/components/Intro.vue"
-import SectionWrapper from '@/components/SectionWrapper.vue'
-import Gallery from '@/components/Gallery.vue'
+import Intro from "@/components/sections/Intro.vue"
+import SectionWrapper from '@/components/wrappers/SectionWrapper.vue'
+import Gallery from '@/components/modules/Gallery.vue'
+
 export default {
     name: "Tours",
     components: {

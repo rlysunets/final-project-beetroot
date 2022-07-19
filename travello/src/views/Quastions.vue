@@ -2,11 +2,9 @@
     <div class="questions">
         <section-wrapper title="Frequently asked questions" hint="Any more questions?">
             <div class="accordion_wrap">
-                <template v-for="(item, i) in faqData" :key="i">
-                    <div class="accordion_item">
-                        <accordion :question="item.question" :answer="item.answer" />
-                    </div>
-                </template>
+                <div class="accordion_item" v-for="(item, i) in faqData" :key="i">
+                    <accordion :question="item.question" :answer="item.answer" />
+                </div>
             </div>
             <div class="ask">
                 <div class="ask_question">Still have questions?</div>
@@ -20,9 +18,9 @@
 
 <script>
 import axios from 'axios'
-import SectionWrapper from '@/components/SectionWrapper.vue'
-import Accordion from '@/components/Accordion.vue'
-import MyButton from '@/components/MyButton.vue'
+import SectionWrapper from '@/components/wrappers/SectionWrapper.vue'
+import Accordion from '@/components/modules/Accordion.vue'
+import MyButton from '@/components/general/MyButton.vue'
 
 export default {
     name: "Questions",

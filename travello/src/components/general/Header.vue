@@ -4,7 +4,7 @@
             <div class="header">
                 <div class="header_logo">
                     <router-link to="/">
-                        <img src="../assets/images/header_logo.svg" alt="Travello logo">
+                        <img src="@/assets/images/header_logo.svg" alt="Travello logo">
                     </router-link>
                 </div>
                 <nav class="header_menu">
@@ -47,7 +47,7 @@
                     <div class="menu-mobile_heading">
                         <div class="menu-mobile_logo">
                             <a href="#">
-                                <img src="../assets/images/header_logo.svg" alt="Travello logo">
+                                <img src="@/assets/images/header_logo.svg" alt="Travello logo">
                             </a>
                         </div>
                         <div class="burger">
@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import MyButton from "./MyButton.vue"
+import MyButton from '@/components/general/MyButton.vue'
 export default {
     name: "Header",
     created() {
@@ -109,7 +109,7 @@ export default {
 
 <style lang="scss" scoped>
 
-@import "../assets/css/humburger.scss";
+@import "@/assets/css/humburger.scss";
 #header {
     background-color: rgba(85, 183, 255, .7);
     position: fixed;

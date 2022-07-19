@@ -17,12 +17,12 @@
 
 <script>
 import axios from "axios"
-import Intro from "@/components/Intro.vue"
-import SectionWrapper from "@/components/SectionWrapper.vue"
-import Form from "@/components/Form.vue"
-import CardsWrapper from '@/components/CardsWrapper.vue'
-import Card from '@/components/Card.vue'
-import Map from '@/components/Map.vue'
+import Intro from "@/components/sections/Intro.vue"
+import SectionWrapper from "@/components/wrappers/SectionWrapper.vue"
+import Form from "@/components/general/Form.vue"
+import CardsWrapper from '@/components/wrappers/CardsWrapper.vue'
+import Card from '@/components/general/Card.vue'
+import Map from '@/components/modules/Map.vue'
 
 export default {
     name: "contacts",

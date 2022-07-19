@@ -1,40 +1,36 @@
 <template>
-    <!-- <div class="explore"> -->
-        <!-- <div class="container"> -->
-            <div class="explore_wrap">
-                <div class="explore_photos">
-                    <div class="pic">
-                        <img class="img_border" :src="require('@/assets/images/explore/'+image1)" :alt="title">
-                    </div>
-                    <div class="pic_positioned">
-                        <img class="img_border" :src="require('@/assets/images/explore/' + image2)" :alt="title">
-                    </div>
-                </div>
-                <div class="explore_content">
-                    <div class="explore_hint hint">{{ hint }}</div>
-                    <h2 class="explore_title section_title">{{ title }}</h2>
-                    <div class="explore_descr">
-                        <p> {{ p1 }} </p>
-                        <p> {{ p2 }} </p>
-                    </div>
-                    <div class="explore_button" v-if="button">
-                        <my-button title="Get started" :is-icon="true" @click="$router.push('/explores')" />
-                    </div>
-                </div>
+    <div class="explore_wrap">
+        <div class="explore_photos">
+            <div class="pic">
+                <img class="img_border" :src="require('@/assets/images/explore/'+image1)" :alt="title">
             </div>
-        <!-- </div> -->
-    <!-- </div> -->
+            <div class="pic_positioned">
+                <img class="img_border" :src="require('@/assets/images/explore/' + image2)" :alt="title">
+            </div>
+        </div>
+        <div class="explore_content">
+            <div class="explore_hint hint">{{ hint }}</div>
+            <h2 class="explore_title section_title">{{ title }}</h2>
+            <div class="explore_descr">
+                <p> {{ p1 }} </p>
+                <p> {{ p2 }} </p>
+            </div>
+            <div class="explore_button" v-if="button">
+                <my-button title="Get started" :is-icon="true" @click="$router.push('/explores')" />
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
-import MyButton from './MyButton.vue'
+import MyButton from '@/components/general/MyButton.vue'
+
 export default {
     name: "Explore",
     props: {
         image1: {
             type: String,
             default: "",
-            // required: true
         },
         image2: {
             type: String,

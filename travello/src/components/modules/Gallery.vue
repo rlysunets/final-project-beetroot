@@ -1,17 +1,10 @@
 <template>
-    <div class="gallery">
-        <div class="container">
-            <div class="gallery_wrap">
-                <lightgallery class="gallery" v-if="galleryData.length !== 0" :settings="{ plugins: plugins }">
-                    <template v-for="(item, i) in galleryData" :key="i">
-                        <a :href="require('@/assets/images/gallery/'+item.img)">
-                            <img :src="require('@/assets/images/gallery/'+item.img)" :alt="item.alt" />
-                        </a>
-                    </template>
-                </lightgallery>
-            </div>
-        </div>
-    </div>
+    <lightgallery class="gallery" v-if="galleryData.length !== 0" :settings="{ plugins: plugins }">
+        <a v-for="(item, i) in galleryData" :key="i"
+            :href="require('@/assets/images/gallery/'+item.img)">
+            <img :src="require('@/assets/images/gallery/'+item.img)" :alt="item.alt" />
+        </a>
+    </lightgallery>
 </template>
 
 <script>

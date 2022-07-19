@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import ModalWindow from './ModalWindow.vue'
+import ModalWindow from '@/components/general/ModalWindow.vue'
 
 export default {
     name: "Form",

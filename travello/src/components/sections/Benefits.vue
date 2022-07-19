@@ -1,5 +1,5 @@
 <template>
-    <div class="benefits">
+    <section class="benefits">
         <div class="benefit" v-for="(item, i) in benefitsData" :key="i">
             <div class="benefit_icon">
                 <img :src="require('@/assets/images/cards/'+item.img)" :alt="item.title">
@@ -9,7 +9,7 @@
                 <div class="benefit_content_descr">{{ item.descr }}</div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .benefits {
     max-width: 650px;
     display: flex;

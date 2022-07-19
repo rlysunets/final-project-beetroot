@@ -9,6 +9,7 @@ import "leaflet/dist/leaflet.css"
 import { LMap, LGeoJson } from "@vue-leaflet/vue-leaflet";
 
 export default {
+    name: "Map",
     components: {
         LMap,
         LGeoJson,

@@ -17,11 +17,6 @@ const routes = [
         component: () => import('../views/WhyUs.vue')
     },
     {
-        path: '/trips',
-        name: 'trips',
-        component: () => import('../views/Trips.vue')
-    },
-    {
         path: '/tours',
         name: 'tours',
         component: () => import('../views/Tours.vue')

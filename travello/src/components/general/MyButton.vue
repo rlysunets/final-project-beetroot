@@ -12,7 +12,7 @@
 
 <script>
 export default {
-    name: "my-button",
+    name: "MyButton",
     props: {
         title: {
             type: String,

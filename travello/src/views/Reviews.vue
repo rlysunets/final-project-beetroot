@@ -11,8 +11,8 @@
 
 <script>
 import axios from 'axios'
-import SectionWrapper from '@/components/SectionWrapper.vue';
-import Review from '@/components/Review.vue';
+import SectionWrapper from '@/components/wrappers/SectionWrapper.vue';
+import Review from '@/components/sections/Review.vue';
 
 export default {
     name: "Reviews",

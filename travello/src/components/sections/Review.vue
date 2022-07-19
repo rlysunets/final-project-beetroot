@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import MyButton from '@/components/MyButton.vue'
+import MyButton from '@/components/general/MyButton.vue'
 
 export default {
     name: "Review",

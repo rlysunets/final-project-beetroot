@@ -22,12 +22,12 @@
 
 <script>
 import axios from 'axios'
-import Intro from '@/components/Intro.vue'
-import SectionWrapper from '@/components/SectionWrapper.vue'
-import Benefits from '@/components/Benefits.vue'
-import ReviewCarousel from "@/components/ReviewCarousel.vue"
-import Faq from '@/components/Faq.vue'
-import Accordion from '@/components/Accordion.vue'
+import Intro from '@/components/sections/Intro.vue'
+import SectionWrapper from '@/components/wrappers/SectionWrapper.vue'
+import Benefits from '@/components/sections/Benefits.vue'
+import ReviewCarousel from "@/components/modules/ReviewCarousel.vue"
+import Faq from '@/components/sections/Faq.vue'
+import Accordion from '@/components/modules/Accordion.vue'
 
 export default {
     name: "WhyUs",

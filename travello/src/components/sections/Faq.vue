@@ -1,5 +1,5 @@
 <template>
-    <div class="faq">
+    <section class="faq">
         <div class="container">
             <div class="faq_wrap">
                 <div class="faq_content">
@@ -16,11 +16,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
-import MyButton from '@/components/MyButton.vue'
+import MyButton from '@/components/general/MyButton.vue'
 
 export default {
     name: "Faq",
