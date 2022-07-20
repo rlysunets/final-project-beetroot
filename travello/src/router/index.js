@@ -19,7 +19,12 @@ const routes = [
     {
         path: '/tours',
         name: 'tours',
-        component: () => import('../views/Tours.vue')
+        component: () => import('../views/tours/Tours.vue')
+    },
+        {
+        path: '/tours/:id',
+        name: 'oneTour',
+        component: () => import('../views/tours/OneTour.vue')
     },
     {
         path: '/contacts',
@@ -46,6 +51,11 @@ const routes = [
         name: 'news',
         component: () => import('../views/news/News.vue')
     },
+    {
+        path: '/news/:title',
+        name: 'oneNews',
+        component: () => import('../views/news/One.vue')
+    }
 ]
 
 const router = createRouter({

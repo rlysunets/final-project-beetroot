@@ -6,12 +6,7 @@
                     <accordion :question="item.question" :answer="item.answer" />
                 </div>
             </div>
-            <div class="ask">
-                <div class="ask_question">Still have questions?</div>
-                <div class="ask_button">
-                    <my-button title="Contact us" :is-icon="true" @click="$router.push('/contacts')" />
-                </div>
-            </div>
+            <ask title="Still have questions?" />
         </section-wrapper>
     </div>
 </template>
@@ -21,6 +16,7 @@ import axios from 'axios'
 import SectionWrapper from '@/components/wrappers/SectionWrapper.vue'
 import Accordion from '@/components/modules/Accordion.vue'
 import MyButton from '@/components/general/MyButton.vue'
+import Ask from '@/components/sections/Ask.vue'
 
 export default {
     name: "Questions",
@@ -37,10 +33,11 @@ export default {
             })
     },
     components: {
-    SectionWrapper,
-    Accordion,
-    MyButton
-}
+        SectionWrapper,
+        Accordion,
+        MyButton,
+        Ask
+    }
 }
 </script>
 
@@ -52,17 +49,6 @@ export default {
     width: 700px;
     .accordion_item {
         margin-bottom: 30px;  
-    }
-}
-.ask {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 50px;
-    &_question {
-        font-size: 18px;
-        line-height: 24px;
-        color: #2094E6;
     }
 }
 @media screen and (max-width: 750px) {

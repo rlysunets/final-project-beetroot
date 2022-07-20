@@ -1,0 +1,122 @@
+[
+    {   
+        "id": 1,
+        "img": "amsterdam.jpg",
+        "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "duration": "7 days",
+        "price": "from $899",
+        "type": "Cultural",
+        "descr": {
+            "p1": "Visit the world-famous 17th century capital of Holland. Enjoy the historic buildings, beautiful museums and pleasant ambiance. Go for a boat tour on the canals, stroll through Vondelpark, and go shopping in the inner city. Amsterdam is a unique city!",
+            "p2": "Amsterdam is alive with creative initiatives. From cultural melting pots and the hippest restaurants with phenomenal views to workshops and interior design shops with vintage items. ",
+            "p3": "NDSM’s innovative bars and cafes are another of the area’s biggest attractions. A firm favorite for many is Pllek, a wonderful spot that was constructed using recycled shipping containers and offers magnificent views of the IJ and its banks. The menu is fully organic, featuring only the highest-quality cuts of meat, sustainably caught fish and local produce. Nearby, Noorderlicht Café is situated in a large greenhouse that promises one of the best-positioned terraces in the neighborhood, packed with greenery and overlooking the River IJ. Its interior is peppered with quirky uneven furniture and décor, adding to the nonchalant bohemian feel. There’s also Café de Ceuvel, an uncompromisingly unconventional café that’s striving for complete sustainability."
+        }
+    },
+    {   
+        "id": 2,
+        "img": "bangkok.jpg",
+        "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
+        "city": "Bangkok",
+        "country": "Thailand",
+        "duration": "11 days",
+        "price": "from $1499",
+        "type": "Histoty",
+        "descr": {
+            "p1": "Visit the world-famous 17th century capital of Holland. Enjoy the historic buildings, beautiful museums and pleasant ambiance. Go for a boat tour on the canals, stroll through Vondelpark, and go shopping in the inner city. Amsterdam is a unique city!",
+            "p2": "Amsterdam is alive with creative initiatives. From cultural melting pots and the hippest restaurants with phenomenal views to workshops and interior design shops with vintage items. ",
+            "p3": "NDSM’s innovative bars and cafes are another of the area’s biggest attractions. A firm favorite for many is Pllek, a wonderful spot that was constructed using recycled shipping containers and offers magnificent views of the IJ and its banks. The menu is fully organic, featuring only the highest-quality cuts of meat, sustainably caught fish and local produce. Nearby, Noorderlicht Café is situated in a large greenhouse that promises one of the best-positioned terraces in the neighborhood, packed with greenery and overlooking the River IJ. Its interior is peppered with quirky uneven furniture and décor, adding to the nonchalant bohemian feel. There’s also Café de Ceuvel, an uncompromisingly unconventional café that’s striving for complete sustainability."
+        }
+    },
+    {   
+        "id": 3,
+        "img": "budapest.jpg",
+        "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
+        "city": "Budapest",
+        "country": "Hungary",
+        "duration": "9 days",
+        "price": "from $750",
+        "type": "Cultural",
+        "descr": {
+            "p1": "Visit the world-famous 17th century capital of Holland. Enjoy the historic buildings, beautiful museums and pleasant ambiance. Go for a boat tour on the canals, stroll through Vondelpark, and go shopping in the inner city. Amsterdam is a unique city!",
+            "p2": "Amsterdam is alive with creative initiatives. From cultural melting pots and the hippest restaurants with phenomenal views to workshops and interior design shops with vintage items. ",
+            "p3": "NDSM’s innovative bars and cafes are another of the area’s biggest attractions. A firm favorite for many is Pllek, a wonderful spot that was constructed using recycled shipping containers and offers magnificent views of the IJ and its banks. The menu is fully organic, featuring only the highest-quality cuts of meat, sustainably caught fish and local produce. Nearby, Noorderlicht Café is situated in a large greenhouse that promises one of the best-positioned terraces in the neighborhood, packed with greenery and overlooking the River IJ. Its interior is peppered with quirky uneven furniture and décor, adding to the nonchalant bohemian feel. There’s also Café de Ceuvel, an uncompromisingly unconventional café that’s striving for complete sustainability."
+        }
+    },
+    {   
+        "id": 4,
+        "img": "krakov.jpg",
+        "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
+        "city": "Krakov",
+        "country": "Poland",
+        "duration": "7 days",
+        "price": "from $899",
+        "type": "Histoty",
+        "descr": {
+            "p1": "Visit the world-famous 17th century capital of Holland. Enjoy the historic buildings, beautiful museums and pleasant ambiance. Go for a boat tour on the canals, stroll through Vondelpark, and go shopping in the inner city. Amsterdam is a unique city!",
+            "p2": "Amsterdam is alive with creative initiatives. From cultural melting pots and the hippest restaurants with phenomenal views to workshops and interior design shops with vintage items. ",
+            "p3": "NDSM’s innovative bars and cafes are another of the area’s biggest attractions. A firm favorite for many is Pllek, a wonderful spot that was constructed using recycled shipping containers and offers magnificent views of the IJ and its banks. The menu is fully organic, featuring only the highest-quality cuts of meat, sustainably caught fish and local produce. Nearby, Noorderlicht Café is situated in a large greenhouse that promises one of the best-positioned terraces in the neighborhood, packed with greenery and overlooking the River IJ. Its interior is peppered with quirky uneven furniture and décor, adding to the nonchalant bohemian feel. There’s also Café de Ceuvel, an uncompromisingly unconventional café that’s striving for complete sustainability."
+        }
+    },
+    {   
+        "id": 5,
+        "img": "lviv.jpg",
+        "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
+        "city": "Lviv",
+        "country": "Ukraine",
+        "duration": "7 days",
+        "price": "from $899",
+        "type": "Hike",
+        "descr": {
+            "p1": "Visit the world-famous 17th century capital of Holland. Enjoy the historic buildings, beautiful museums and pleasant ambiance. Go for a boat tour on the canals, stroll through Vondelpark, and go shopping in the inner city. Amsterdam is a unique city!",
+            "p2": "Amsterdam is alive with creative initiatives. From cultural melting pots and the hippest restaurants with phenomenal views to workshops and interior design shops with vintage items. ",
+            "p3": "NDSM’s innovative bars and cafes are another of the area’s biggest attractions. A firm favorite for many is Pllek, a wonderful spot that was constructed using recycled shipping containers and offers magnificent views of the IJ and its banks. The menu is fully organic, featuring only the highest-quality cuts of meat, sustainably caught fish and local produce. Nearby, Noorderlicht Café is situated in a large greenhouse that promises one of the best-positioned terraces in the neighborhood, packed with greenery and overlooking the River IJ. Its interior is peppered with quirky uneven furniture and décor, adding to the nonchalant bohemian feel. There’s also Café de Ceuvel, an uncompromisingly unconventional café that’s striving for complete sustainability."
+        }
+    },
+    {   
+        "id": 6,
+        "img": "praga.jpg",
+        "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
+        "city": "Praga",
+        "country": "Chech repablick",
+        "duration": "7 days",
+        "price": "from $899",
+        "type": "Cultural",
+        "descr": {
+            "p1": "Visit the world-famous 17th century capital of Holland. Enjoy the historic buildings, beautiful museums and pleasant ambiance. Go for a boat tour on the canals, stroll through Vondelpark, and go shopping in the inner city. Amsterdam is a unique city!",
+            "p2": "Amsterdam is alive with creative initiatives. From cultural melting pots and the hippest restaurants with phenomenal views to workshops and interior design shops with vintage items. ",
+            "p3": "NDSM’s innovative bars and cafes are another of the area’s biggest attractions. A firm favorite for many is Pllek, a wonderful spot that was constructed using recycled shipping containers and offers magnificent views of the IJ and its banks. The menu is fully organic, featuring only the highest-quality cuts of meat, sustainably caught fish and local produce. Nearby, Noorderlicht Café is situated in a large greenhouse that promises one of the best-positioned terraces in the neighborhood, packed with greenery and overlooking the River IJ. Its interior is peppered with quirky uneven furniture and décor, adding to the nonchalant bohemian feel. There’s also Café de Ceuvel, an uncompromisingly unconventional café that’s striving for complete sustainability."
+        }
+    },
+    {   
+        "id": 7,
+        "img": "roma.jpg",
+        "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
+        "city": "Roma",
+        "country": "Italy",
+        "duration": "7 days",
+        "price": "from $899",
+        "type": "Histoty",
+        "descr": {
+            "p1": "Visit the world-famous 17th century capital of Holland. Enjoy the historic buildings, beautiful museums and pleasant ambiance. Go for a boat tour on the canals, stroll through Vondelpark, and go shopping in the inner city. Amsterdam is a unique city!",
+            "p2": "Amsterdam is alive with creative initiatives. From cultural melting pots and the hippest restaurants with phenomenal views to workshops and interior design shops with vintage items. ",
+            "p3": "NDSM’s innovative bars and cafes are another of the area’s biggest attractions. A firm favorite for many is Pllek, a wonderful spot that was constructed using recycled shipping containers and offers magnificent views of the IJ and its banks. The menu is fully organic, featuring only the highest-quality cuts of meat, sustainably caught fish and local produce. Nearby, Noorderlicht Café is situated in a large greenhouse that promises one of the best-positioned terraces in the neighborhood, packed with greenery and overlooking the River IJ. Its interior is peppered with quirky uneven furniture and décor, adding to the nonchalant bohemian feel. There’s also Café de Ceuvel, an uncompromisingly unconventional café that’s striving for complete sustainability."
+        }
+    },
+    {   
+        "id": 8,
+        "img": "romania.jpg",
+        "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
+        "city": "Transylvania",
+        "country": "Romania",
+        "duration": "7 days",
+        "price": "from $899",
+        "type": "Hike",
+        "descr": {
+            "p1": "Visit the world-famous 17th century capital of Holland. Enjoy the historic buildings, beautiful museums and pleasant ambiance. Go for a boat tour on the canals, stroll through Vondelpark, and go shopping in the inner city. Amsterdam is a unique city!",
+            "p2": "Amsterdam is alive with creative initiatives. From cultural melting pots and the hippest restaurants with phenomenal views to workshops and interior design shops with vintage items. ",
+            "p3": "NDSM’s innovative bars and cafes are another of the area’s biggest attractions. A firm favorite for many is Pllek, a wonderful spot that was constructed using recycled shipping containers and offers magnificent views of the IJ and its banks. The menu is fully organic, featuring only the highest-quality cuts of meat, sustainably caught fish and local produce. Nearby, Noorderlicht Café is situated in a large greenhouse that promises one of the best-positioned terraces in the neighborhood, packed with greenery and overlooking the River IJ. Its interior is peppered with quirky uneven furniture and décor, adding to the nonchalant bohemian feel. There’s also Café de Ceuvel, an uncompromisingly unconventional café that’s striving for complete sustainability."
+        }
+    }
+]
