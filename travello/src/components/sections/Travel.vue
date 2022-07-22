@@ -2,19 +2,17 @@
     <section class="travel">
         <section-wrapper title="What we offer" hint="Travel with us" descr="Families with children of different ages, tourists of the older generation, youth companies, couples
         in love and single travelers - for all categories we will offer quality and interesting rest.">
-            <my-button title="Get started" :is-icon="true" />
         </section-wrapper>
     </section>
 </template>
 
 <script>
-import MyButton from '@/components/general/MyButton.vue'
 import SectionWrapper from '@/components/wrappers/SectionWrapper.vue'
+
 export default {
     name: "Trvel",
     components: {
-        SectionWrapper,
-        MyButton
+        SectionWrapper
     },
 }
 </script>

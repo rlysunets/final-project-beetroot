@@ -115,8 +115,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-
 @import "@/assets/css/humburger.scss";
 #overlay {
     display: none;
@@ -126,7 +124,7 @@ export default {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(85, 183, 255, .6);
+    background-color: rgba(85, 183, 255, .3);
     &.open {
         display: block;
         overflow: hidden;
@@ -194,7 +192,7 @@ export default {
     padding-left: 30px;
     position: fixed;
     width: 350px;
-    background-color: rgba(32, 148, 230, .9);
+    background-color: rgb(85, 183, 255);
     box-shadow: 0 0 10px #FFF;
     backdrop-filter: blur(10px);
     height: 100vh;

@@ -32,20 +32,21 @@ export default {
 </script>
 
 <style lang="scss">
+
 .btn {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     background-color: #2194e6;
-    width: 134px;
+    min-width: 134px;
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     color: #FFFFFF;
-    padding: 8px 0;
+    padding: 8px 10px;
     border: none;
     &:hover {
         color: #2194e6;
@@ -58,6 +59,8 @@ export default {
     }
     span {
         margin-right: 10px;
+
+
     }
 }
 </style>

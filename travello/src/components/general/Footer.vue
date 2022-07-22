@@ -111,7 +111,7 @@
 
                 </div>
 
-                <div class="footer_copy">© 2022 Travello | All Rights Reserved</div>
+                <div class="footer_copy">© 2022 Travello | by Roman Lysunets</div>
 
             </div>
         </div>

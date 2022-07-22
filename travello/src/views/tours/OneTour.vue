@@ -70,8 +70,7 @@ export default {
     },
     data() {
         return {
-            oneItem: null,
-
+            oneItem: null
         }
     },
     created() {
@@ -80,6 +79,9 @@ export default {
             .then(resp => {
                 this.oneItem = resp.data.find(el => el.slug === this.$route.params.slug)
             })
+            // .catch(() => {
+            //     $router.push('/:pathMatch(.*)*')
+            // })
     }
 }
 </script>
@@ -103,9 +105,9 @@ export default {
     .item_content {
         display: flex;
         justify-content: space-between;
-        gap: 60px;
+        gap: 50px;
         .sidebar {
-            flex: 30%;
+            flex-basis: 35%;
             padding: 40px;
             background-color: #B1DAF6;
             &_block {
@@ -139,7 +141,7 @@ export default {
             }
         }
         .about_tour {
-            flex: 70%;
+            flex-basis: 65%;
             p {
                 font-family: 'Work Sans';
                 font-weight: 400;
@@ -149,6 +151,30 @@ export default {
                 &:not(:last-child) {
                     margin-bottom: 20px;
                 }
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .one_tour {
+        .item_pic {
+            margin-bottom: 60px;
+        }
+        .item_content {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            gap: 0;
+            .sidebar {
+                flex-basis: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 40px;
+                &_block {
+                    flex: 50%;
+                }
+            }
+            .about_tour {
+                flex-basis: 1000%;
             }
         }
     }

@@ -59,7 +59,7 @@ export default {
 }
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .tours_list {
     display: flex; 
     flex-wrap: wrap;
@@ -121,6 +121,12 @@ export default {
             transition: all .3s ease-in;
         }
     }
-
+}
+@media screen and (max-width: 800px) {
+    .tours_list {
+        .tours_item {
+            flex: 100%;
+        }
+    }
 }
 </style>

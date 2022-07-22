@@ -55,6 +55,11 @@ const routes = [
         path: '/news/:title',
         name: 'oneNews',
         component: () => import('../views/news/One.vue')
+    },
+        {
+        path: '/:pathMatch(.*)*',
+        name: '404',
+        component: () => import('../views/404.vue')
     }
 ]
 
