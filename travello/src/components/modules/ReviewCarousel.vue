@@ -22,6 +22,12 @@ import Review from '@/components/sections/Review.vue';
 
 export default {
     name: "ReviewCarousel",
+    components: {
+        Carousel,
+        Slide,
+        Navigation,
+        Review
+    },
     data() {
         return {
             reviewsData: [],
@@ -40,13 +46,7 @@ export default {
             .then(resp => {
                 this.reviewsData = resp.data
             })
-    },
-    components: {
-        Carousel,
-        Slide,
-        Navigation,
-        Review
-    },
+    }
 }
 </script>
 

@@ -15,6 +15,11 @@ import lgZoom from 'lightgallery/plugins/zoom'
 
 export default {
     name: "Gallery",
+    components: {
+        Lightgallery,
+        lgThumbnail,
+        lgZoom
+    },
     data() {
         return {
             plugins: [lgThumbnail, lgZoom],
@@ -27,12 +32,7 @@ export default {
             .then(resp => {
                 this.galleryData = resp.data
             })
-    },
-    components: {
-        Lightgallery,
-        lgThumbnail,
-        lgZoom
-    },
+    }
 }
 </script>
 

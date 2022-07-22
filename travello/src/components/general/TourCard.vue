@@ -1,7 +1,7 @@
 <template>
     <div class="tours_list">
-        <div v-for="(item, id) in toursData" :key="id" class="tours_item">
-            <router-link :to="{ name: 'oneTour', params: { id: item.id }}">
+        <div v-for="(item, id) in toursList" :key="id" class="tours_item">
+            <router-link :to="{ name: 'oneTour', params: { slug: item.slug }}">
                 <div class="item_pic">
                     <div class="badge">{{ item.type }}</div>
                     <img :src="require('@/assets/images/gallery/'+item.img)" :alt="item.city">
@@ -30,9 +30,23 @@ import MyButton from '@/components/general/MyButton.vue'
 
 export default {
     name: "TourCard",
+    components: {
+        MyButton
+    },
+    props: {
+        type: {
+            type: String,
+            default: ""
+        },
+    },
     data() {
         return {
             toursData: []
+        }
+    },
+    computed: {
+        toursList() {
+            return this.type !== "" ? this.toursData.filter(el => el.type === this.type) : this.toursData
         }
     },
     created() {
@@ -41,10 +55,6 @@ export default {
             .then(resp => {
                 this.toursData = resp.data
             })
-
-    },
-    components: {
-        MyButton
     }
 }
 </script>

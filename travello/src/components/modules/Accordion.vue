@@ -12,6 +12,10 @@ import { VueCollapsiblePanelGroup, VueCollapsiblePanel } from '@dafcoe/vue-colla
 import '@dafcoe/vue-collapsible-panel/dist/vue-collapsible-panel.css'
 export default {
     name: "Accordion",
+    components: {
+        VueCollapsiblePanelGroup,
+        VueCollapsiblePanel
+    },
     props: {
         question: {
             type: String,
@@ -23,10 +27,6 @@ export default {
             default: "",
             required: true
         }
-    },
-    components: {
-        VueCollapsiblePanelGroup,
-        VueCollapsiblePanel
     }
 }
 </script>

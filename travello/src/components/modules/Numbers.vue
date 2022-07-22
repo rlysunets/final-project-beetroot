@@ -15,6 +15,9 @@ import Vue3Autocounter from 'vue3-autocounter';
 
 export default {
     name: "Numbers",
+    components: {
+        Vue3Autocounter
+    },
     data() {
         return {
             numbersData: []
@@ -45,9 +48,6 @@ export default {
                 window.removeEventListener("scroll", this.startCounters)
             }
         }
-    },
-    components: {
-        Vue3Autocounter
     }
 }
 </script>

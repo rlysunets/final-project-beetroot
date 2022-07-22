@@ -22,7 +22,7 @@ const routes = [
         component: () => import('../views/tours/Tours.vue')
     },
         {
-        path: '/tours/:id',
+        path: '/tours/:slug',
         name: 'oneTour',
         component: () => import('../views/tours/OneTour.vue')
     },

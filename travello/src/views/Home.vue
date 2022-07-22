@@ -30,6 +30,14 @@ import ReviewCarousel from "@/components/modules/ReviewCarousel.vue"
 
 export default {
     name: "Home",
+    components: {
+        Hero,
+        Explore,
+        Card,
+        CardsWrapper,
+        Travel,
+        ReviewCarousel,
+    },
     data() {
         return {
             exploreData: [],
@@ -48,14 +56,6 @@ export default {
             .then(resp => {
                 this.homeCardsData = resp.data
             })
-    },
-    components: {
-        Hero,
-        Explore,
-        Card,
-        CardsWrapper,
-        Travel,
-        ReviewCarousel
     }
 }
 </script>

@@ -27,6 +27,9 @@ import MyButton from '@/components/general/MyButton.vue'
 
 export default {
     name: "Explore",
+    components: {
+        MyButton
+    },
     props: {
         image1: {
             type: String,
@@ -58,10 +61,7 @@ export default {
             type: Boolean,
             default: true,
         }
-    },
-    components: {
-        MyButton
-    } 
+    }
 }
 </script>
 

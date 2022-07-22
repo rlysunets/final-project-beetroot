@@ -20,6 +20,12 @@ import Ask from '@/components/sections/Ask.vue'
 
 export default {
     name: "Questions",
+    components: {
+        SectionWrapper,
+        Accordion,
+        MyButton,
+        Ask
+    },
     data() {
         return {
             faqData: []
@@ -31,12 +37,6 @@ export default {
             .then(resp => {
                 this.faqData = resp.data
             })
-    },
-    components: {
-        SectionWrapper,
-        Accordion,
-        MyButton,
-        Ask
     }
 }
 </script>

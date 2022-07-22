@@ -1,6 +1,6 @@
 [
     {   
-        "id": 1,
+        "slug": "Amsterdam",
         "img": "amsterdam.jpg",
         "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
         "city": "Amsterdam",
@@ -15,7 +15,7 @@
         }
     },
     {   
-        "id": 2,
+        "slug": "Bangkok",
         "img": "bangkok.jpg",
         "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
         "city": "Bangkok",
@@ -30,7 +30,7 @@
         }
     },
     {   
-        "id": 3,
+        "slug": "Budapest",
         "img": "budapest.jpg",
         "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
         "city": "Budapest",
@@ -45,7 +45,7 @@
         }
     },
     {   
-        "id": 4,
+        "slug": "Krakov",
         "img": "krakov.jpg",
         "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
         "city": "Krakov",
@@ -60,7 +60,7 @@
         }
     },
     {   
-        "id": 5,
+        "slug": "Lviv",
         "img": "lviv.jpg",
         "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
         "city": "Lviv",
@@ -75,7 +75,7 @@
         }
     },
     {   
-        "id": 6,
+        "slug": "Praga",
         "img": "praga.jpg",
         "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
         "city": "Praga",
@@ -90,7 +90,7 @@
         }
     },
     {   
-        "id": 7,
+        "slug": "Roma",
         "img": "roma.jpg",
         "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
         "city": "Roma",
@@ -105,7 +105,7 @@
         }
     },
     {   
-        "id": 8,
+        "slug": "Transylvania",
         "img": "romania.jpg",
         "title": "The city and port, western Netherlands, located on the IJsselmeer and connected to the North Sea.",
         "city": "Transylvania",

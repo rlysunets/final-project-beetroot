@@ -21,8 +21,10 @@ import axios from 'axios'
 import MyButton from '@/components/general/MyButton.vue'
 
 export default {
-  components: { MyButton },
     name: "One",
+    components: {
+        MyButton
+    },
     data() {
         return {
             oneItem: []

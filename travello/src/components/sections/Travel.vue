@@ -11,6 +11,7 @@
 import MyButton from '@/components/general/MyButton.vue'
 import SectionWrapper from '@/components/wrappers/SectionWrapper.vue'
 export default {
+    name: "Trvel",
     components: {
         SectionWrapper,
         MyButton

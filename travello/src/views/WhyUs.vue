@@ -31,6 +31,14 @@ import Accordion from '@/components/modules/Accordion.vue'
 
 export default {
     name: "WhyUs",
+    components: {
+        Intro,
+        SectionWrapper,
+        Benefits,
+        ReviewCarousel,
+        Accordion,
+        Faq
+    },
     data() {
         return {
             faqData: []
@@ -42,14 +50,6 @@ export default {
             .then(resp => {
                 this.faqData = resp.data
             })
-    },
-    components: {
-        Intro,
-        SectionWrapper,
-        Benefits,
-        ReviewCarousel,
-        Accordion,
-        Faq
     }
 }
 </script>

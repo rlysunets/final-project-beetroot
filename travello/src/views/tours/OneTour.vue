@@ -1,5 +1,5 @@
 <template>
-    <div class="one_tour">
+    <div class="one_tour" v-if="oneItem !== null">
         <section-wrapper hint="About the place" :title="oneItem.city">
             <div class="item_pic">
                 <img :src="require('@/assets/images/gallery/' + oneItem.img)" :alt="oneItem.city">
@@ -19,7 +19,7 @@
                         <div class="title">Type</div>
                         <div class="content">
                             <div class="icon">
-                                <img src="@/assets/images/marker.svg" alt="icon">
+                                <img src="@/assets/images/type.svg" alt="icon">
                             </div>
                             <div class="text">{{ oneItem.type }}</div>
                         </div>
@@ -28,7 +28,7 @@
                         <div class="title">Duration</div>
                         <div class="content">
                             <div class="icon">
-                                <img src="@/assets/images/marker.svg" alt="icon">
+                                <img src="@/assets/images/duration.svg" alt="icon">
                             </div>
                             <div class="text">{{ oneItem.duration }}</div>
                         </div>
@@ -37,7 +37,7 @@
                         <div class="title">Price</div>
                         <div class="content">
                             <div class="icon">
-                                <img src="@/assets/images/marker.svg" alt="icon">
+                                <img src="@/assets/images/price.svg" alt="icon">
                             </div>
                             <div class="text">{{ oneItem.price }}</div>
                         </div>
@@ -52,7 +52,7 @@
                     <p>{{ oneItem.descr.p3 }}</p>
                 </div>
             </div>
-            <ask title="Like this tour? Contact to book"/>
+            <ask title="Like this tour? Contact to book" />
         </section-wrapper>
     </div>
 </template>
@@ -64,23 +64,23 @@ import Ask from '@/components/sections/Ask.vue'
 
 export default {
     name: "OneTour",
+    components: {
+        SectionWrapper,
+        Ask
+    },
     data() {
         return {
-            oneItem: []
+            oneItem: null,
+
         }
     },
     created() {
         axios
             .get('../data/tours.json')
             .then(resp => {
-                this.oneItem = resp.data.find(el => el.id === +this.$route.params.id)
-                console.log(this.oneItem);
+                this.oneItem = resp.data.find(el => el.slug === this.$route.params.slug)
             })
-    },
-    components: {
-        SectionWrapper,
-        Ask
-    },
+    }
 }
 </script>
 
@@ -121,7 +121,12 @@ export default {
                     align-items: center;
                     gap: 20px;
                     .icon {
-
+                        width: 20px;
+                        height: 20px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                     .text {
                         font-family: 'Work Sans';

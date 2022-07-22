@@ -16,6 +16,10 @@ import Review from '@/components/sections/Review.vue';
 
 export default {
     name: "Reviews",
+    components: {
+        SectionWrapper,
+        Review
+    },
     data() {
         return {
             reviewsData: []
@@ -27,10 +31,6 @@ export default {
             .then(resp => {
                 this.reviewsData = resp.data
             })
-    },
-    components: {
-        SectionWrapper,
-        Review
     }
 }
 </script>

@@ -4,11 +4,12 @@
 
         <section-wrapper title="Popular Tour Destinations" hint="Perfect vacation">
             <div class="types">
-                <span class="hint">Cultural</span>
-                <span class="hint">Histoty</span>
-                <span class="hint">Hike</span>
+                <span class="hint" @click="setType('')">All</span>
+                <span class="hint" @click="setType('Cultural')">Cultural</span>
+                <span class="hint" @click="setType('Histoty')">Histoty</span>
+                <span class="hint" @click="setType('Hike')">Hike</span>
             </div>
-            <tour-card />
+            <tour-card :type="type" />
         </section-wrapper>
 
         <section-wrapper hint="About us" title="Gallery">
@@ -30,6 +31,16 @@ export default {
         TourCard,
         SectionWrapper,
         Gallery,
+    },
+    data() {
+        return {
+            type: ""
+        }
+    },
+    methods: {
+        setType(type) {
+            this.type = type
+        }
     }
 
 }
@@ -38,8 +49,8 @@ export default {
 <style lang="scss">
 .types {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    // justify-content: center;
+    gap: 40px;
     margin-bottom: 20px;
     span {
         cursor: pointer;

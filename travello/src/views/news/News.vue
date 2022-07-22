@@ -3,6 +3,13 @@
         <intro title="News" bg="hero_news.jpg" />
 
         <section-wrapper title="The latest travel news" hint="News">
+            <div class="pagination">
+                <button :class="{'disabled': page === 1}" @click="goToPrev">&#60;&#60;</button>
+                <button v-for="p in totalPage" :key="p" :class="{'active': p === page}" @click="goToPage(p)">{{ p
+                    }}</button>
+                <button :class="{'disabled': page === totalPage}" @click="goToNext">&#62;&#62;</button>
+            </div>
+
             <div class="news_list">
                 <div class="news_item" v-for="(item, i) in newsList" :key="i">
                     <router-link :to="{ name: 'oneNews', params: { title: item.title } }">
@@ -17,7 +24,6 @@
                     </router-link>
                 </div>
             </div>
-            <!-- <pagination :page="page" :total="total" @goToPage="goToPage" /> -->
         </section-wrapper>
     </div>
 </template>
@@ -26,26 +32,37 @@
 import axios from 'axios'
 import Intro from "@/components/sections/Intro.vue"
 import SectionWrapper from '@/components/wrappers/SectionWrapper.vue'
-import Pagination from '@/components/general/Pagination.vue'
 
 export default {
     name: "News",
+    components: {
+        Intro,
+        SectionWrapper
+    },
     data() {
         return {
-            API_key: "76498ae586a94328ac5ccba99185f515",
+            // API_key: "76498ae586a94328ac5ccba99185f515",
+            API_key: "1c05599a56d5486e85cd22b247e1bac8",
             q: "tourism",
             newsList: [],
             page: 1,
-            total: 0
+            totalPage: 5
         }
     },
     computed: {
-        nowDateFormater() {
+        toDateFormater() {
             const date = new Date()
             const year = date.getFullYear()
             const month = date.getMonth() + 1
             const day = date.getDate()
-            return year+'-'+(month < 10 ? '0' + month : month)+'-'+(day < 10 ? '0'+day : day)
+            return year + '-' + (month < 10 ? '0' + month : month) + '-' + (day < 10 ? '0' + day : day)
+        },
+        fromDateFormater() {
+            const date = new Date()
+            const year = date.getFullYear()
+            const month = date.getMonth() + 1
+            const day = date.getDate() - 1
+            return year + '-' + (month < 10 ? '0' + month : month) + '-' + (day < 10 ? '0' + day : day)
         }
     },
     created() {
@@ -54,10 +71,10 @@ export default {
     methods: {
         fetchData() {
             let url = `https://newsapi.org/v2/everything?q=${this.q}&apiKey=${this.API_key}`
-            url += `&from=${this.nowDateFormater}`
-            url += `&to=${this.nowDateFormater}`
+            url += `&from=${this.fromDateFormater}`
+            url += `&to=${this.toDateFormater}`
             url += `&language=en`
-            url += `&pageSize=20`
+            url += `&pageSize=18`
             url += `&page=${this.page}`
             axios
                 .get(url)
@@ -65,26 +82,51 @@ export default {
                     this.newsList = resp.data.articles
                 })
         },
-        goToPage(new_page) {
-            this.page = new_page
+        goToPage(p) {
+            this.page = p
             this.fetchData()
+        },
+        goToPrev() {
+            if (this.page !== 1) {
+                this.page = this.page - 1
+                this.fetchData()
+            }
+        },
+        goToNext() {
+            if (this.page !== this.totalPage) {
+                this.page = this.page + 1
+                this.fetchData()
+            }
         }
-    },
-    components: {
-        Intro,
-        SectionWrapper,
-        Pagination
     }
 }
 </script>
 
 <style lang="scss" scoped>
+.pagination {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    button {
+        cursor: pointer;
+        background-color: rgba(85, 183, 255, .6);
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 10px;
+        &.disabled {
+            background-color: lightgrey;
+        }
+        &.active {
+            background-color: #2194e6;;
+        }
+    }
+}
 .news_list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     .news_item {
         padding: 20px;
-        flex: 25%;
+        flex-basis: 33%;
         display: flex;
         flex-direction: column;
         .item_pic {
@@ -98,9 +140,11 @@ export default {
                 position: absolute;
                 left: 0;
                 top: 0;
+                display: block;
             }
         }
         .item_content {
+            padding: 10px;
             .title{
                 margin-bottom: 10px;
             }
@@ -114,26 +158,26 @@ export default {
                 color: #333333;
             }
         }
-    }
-}
-@media screen and (max-width: 992px) {
-    .news_list {
-        .news_item {
-            flex: 33%;
+        a:hover {
+            display: block;
+            box-shadow: 0px 7px 29px rgba(100, 100, 111, 0.2);
+            transform: translateY(-20px);
+            transition: all .3s ease-in;
         }
     }
+    
 }
 @media screen and (max-width: 750px) {
     .news_list {
         .news_item {
-            flex: 50%;
+            flex-basis: 50%;
         }
     }
 }
 @media screen and (max-width: 550px) {
     .news_list {
         .news_item {
-            flex: 100%;
+            flex-basis: 100%;
         }
     }
 }

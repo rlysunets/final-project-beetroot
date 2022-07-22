@@ -26,6 +26,14 @@ import Map from '@/components/modules/Map.vue'
 
 export default {
     name: "contacts",
+    components: {
+        Intro,
+        SectionWrapper,
+        Form,
+        CardsWrapper,
+        Card,
+        Map
+    },
     data() {
         return {
             addressData: []
@@ -37,14 +45,6 @@ export default {
             .then(resp => {
                 this.addressData = resp.data
             })
-    },
-    components: {
-        Intro,
-        SectionWrapper,
-        Form,
-        CardsWrapper,
-        Card,
-        Map
     }
 }
 </script>

@@ -38,6 +38,15 @@ import Gallery from '@/components/modules/Gallery.vue'
 
 export default {
     name: "About",
+    components: {
+        Intro,
+        Explore,
+        SectionWrapper,
+        CardsWrapper,
+        Card,
+        Numbers,
+        Gallery
+    },
     data() {
         return {
             exploreData: [],
@@ -56,15 +65,6 @@ export default {
                 this.whyUsCardsData = resp.data
             })
 
-    },
-    components: {
-        Intro,
-        Explore,
-        SectionWrapper,
-        CardsWrapper,
-        Card,
-        Numbers,
-        Gallery
     }
 }
 </script>

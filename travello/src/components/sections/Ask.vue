@@ -12,15 +12,15 @@ import MyButton from '@/components/general/MyButton.vue'
 
 export default {
     name: "Ask",
+    components: {
+        MyButton
+    },
     props: {
         title: {
             type: String,
             default: "",
             required: true
         }
-    },
-    components: {
-        MyButton
     }
 }
 </script>

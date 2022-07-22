@@ -7,7 +7,7 @@
                     The Travello company has over 30 years of professional experience in the field of outbound
                     tourism and offers only high-quality tour products on the tourist market.
                 </div>
-                <my-button title="Get started" :is-icon="false"  />
+                <my-button title="Get started" :is-icon="false" @click="$router.push('/tours')" />
             </div>
         </div>
     </section>

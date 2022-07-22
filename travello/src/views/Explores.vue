@@ -14,6 +14,10 @@ import SectionWrapper from '@/components/wrappers/SectionWrapper.vue'
 
 export default {
     name: "Explores",
+    components: {
+        Explore,
+        SectionWrapper
+    },
     data() {
         return {
             exploreData: []
@@ -25,10 +29,6 @@ export default {
             .then(resp => {
                 this.exploreData = resp.data
             })
-    },
-    components: {
-        Explore,
-        SectionWrapper
     }
 }
 </script>
